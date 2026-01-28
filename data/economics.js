@@ -32,10 +32,6 @@ options: [
 ],
 correct: 3
 },
-
-
-[Image of the circular flow of income]
-
 {
 id: 4,
 question: "Repo rate is the rate at which RBI lends to banks for:",
@@ -557,3 +553,4 @@ options: [
 correct: 1
 }
 ];
+
