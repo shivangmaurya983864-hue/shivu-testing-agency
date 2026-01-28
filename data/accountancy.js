@@ -1,552 +1,556 @@
 const questions = [
 {
 id: 1,
-question: "Which of the following is not a feature of a Partnership?",
+question: "Cash Flow Statement is prepared on the basis of:",
 options: [
-"Agreement",
-"Sharing of Profits",
-"Limited Liability",
-"Two or more persons"
-],
-correct: 3
-},
-{
-id: 2,
-question: "In the absence of a Partnership Deed, the interest on a partner's loan is allowed at:",
-options: [
-"6% per annum",
-"12% per annum",
-"Interest is not allowed",
-"8% per annum"
-],
-correct: 1
-},
-{
-id: 3,
-question: "Goodwill of a firm is not affected by:",
-options: [
-"Location of the firm",
-"Reputation of the firm",
-"Better customer service",
-"None of the above"
-],
-correct: 4
-},
-{
-id: 4,
-question: "The Sacrifice Ratio is calculated as:",
-options: [
-"New Ratio - Old Ratio",
-"Old Ratio - New Ratio",
-"Gaining Ratio - Old Ratio",
-"Old Ratio - Gaining Ratio"
+"Accrual basis",
+"Cash basis",
+"Mixed basis",
+"Mercantile basis"
 ],
 correct: 2
 },
 {
-id: 5,
-question: "Revaluation Account is prepared at the time of:",
+id: 2,
+question: "Dividend paid on equity shares is classified under:",
 options: [
-"Admission of a partner",
-"Retirement of a partner",
-"Death of a partner",
-"All of the above"
+"Operating activity",
+"Investing activity",
+"Financing activity",
+"Non-cash activity"
 ],
-correct: 4
+correct: 3
+},
+
+{
+id: 3,
+question: "Common Size Statement is also called:",
+options: [
+"Horizontal analysis",
+"Trend analysis",
+"Vertical analysis",
+"Ratio analysis"
+],
+correct: 3
+},
+{
+id: 4,
+question: "Security Premium is shown under:",
+options: [
+"Share Capital",
+"Current Liabilities",
+"Reserves and Surplus",
+"Non-current Assets"
+],
+correct: 3
+},
+{
+id: 5,
+question: "Issue of shares results in:",
+options: [
+"Cash inflow – Operating",
+"Cash inflow – Financing",
+"Cash inflow – Investing",
+"Non-cash transaction"
+],
+correct: 2
 },
 {
 id: 6,
-question: "On the death of a partner, the amount due to him is paid to:",
+question: "Goodwill on dissolution is transferred to:",
 options: [
-"Remaining partners",
-"Government",
-"His Executor",
-"His Friends"
+"Debit of Realisation A/c",
+"Credit of Realisation A/c",
+"Debit of Partners’ Capital A/c",
+"Credit of Partners’ Capital A/c"
 ],
-correct: 3
+correct: 1
 },
 {
 id: 7,
-question: "Realisation Account is a:",
+question: "Debentures issued for consideration other than cash include:",
 options: [
-"Personal Account",
-"Real Account",
-"Nominal Account",
-"Cash Account"
+"Issued to public",
+"Issued to vendor",
+"Issued for cash",
+"Issued at par"
 ],
-correct: 3
+correct: 2
 },
 {
 id: 8,
-question: "On dissolution, the balance of 'Cash in Hand' is transferred to:",
+question: "Over-subscription of shares means:",
 options: [
-"Realisation Account",
-"Partners' Capital Account",
-"Cash Account",
-"Profit and Loss Account"
+"Application < shares issued",
+"Application = shares issued",
+"Application > shares issued",
+"Shares forfeited"
 ],
 correct: 3
 },
 {
 id: 9,
-question: "Equity shareholders are:",
+question: "Share forfeiture account is shown under:",
 options: [
-"Creditors of the company",
-"Owners of the company",
-"Customers of the company",
-"None of the above"
+"Share Capital",
+"Reserves & Surplus",
+"Current Liabilities",
+"Loans"
 ],
 correct: 2
 },
 {
 id: 10,
-question: "The maximum amount beyond which a company cannot raise capital is:",
+question: "Which ratio is a solvency ratio?",
 options: [
-"Issued Capital",
-"Subscribed Capital",
-"Authorised Capital",
-"Called-up Capital"
+"Current ratio",
+"Stock turnover ratio",
+"Debt-equity ratio",
+"Gross profit ratio"
+],
+correct: 3
+},
+
+{
+id: 11,
+question: "On retirement of a partner, goodwill is adjusted in:",
+options: [
+"Old ratio",
+"Sacrificing ratio",
+"Gaining ratio",
+"New ratio"
 ],
 correct: 3
 },
 {
-id: 11,
-question: "Share Application Account is a:",
-options: [
-"Personal Account",
-"Real Account",
-"Nominal Account",
-"Fictitious Account"
-],
-correct: 1
-},
-{
 id: 12,
-question: "Discount on issue of shares is shown in the Balance Sheet under:",
+question: "Capital employed =",
 options: [
-"Current Assets",
-"Non-current Assets",
-"Other Non-current Assets",
-"Share Capital"
+"Current Assets − Current Liabilities",
+"Fixed Assets + Current Assets",
+"Total Assets − Current Liabilities",
+"Share Capital only"
 ],
 correct: 3
 },
 {
 id: 13,
-question: "Debentures represent:",
+question: "Cash equivalents include:",
 options: [
-"Long-term debt of a company",
-"Investment by shareholders",
-"Director's share",
-"Short-term liability"
+"Bills receivable",
+"Treasury bills",
+"Inventory",
+"Debtors"
 ],
-correct: 1
+correct: 2
 },
 {
 id: 14,
-question: "Interest on debentures is paid at:",
+question: "Revaluation Account is prepared at:",
 options: [
-"A fixed rate",
-"A variable rate",
-"The discretion of directors",
-"Profit rate"
-],
-correct: 1
-},
-{
-id: 15,
-question: "Debentures cannot be issued:",
-options: [
-"At Par",
-"At Premium",
-"At Discount",
-"None of the above"
+"Admission of partner",
+"Retirement of partner",
+"Change in profit sharing",
+"All of the above"
 ],
 correct: 4
 },
 {
-id: 16,
-question: "Financial Statement analysis is useful for:",
+id: 15,
+question: "Issue of debentures at discount and redeemable at par results in:",
 options: [
-"Management",
-"Investors",
-"Creditors",
-"All of the above"
+"Profit",
+"Loss on issue",
+"Capital reserve",
+"General reserve"
+],
+correct: 2
+},
+{
+id: 16,
+question: "Interest on partner’s loan (if deed is silent) is allowed at:",
+options: [
+"6%",
+"8%",
+"10%",
+"12%"
 ],
 correct: 4
 },
 {
 id: 17,
-question: "Horizontal Analysis is also known as:",
+question: "Which is NOT a capital receipt?",
 options: [
-"Dynamic Analysis",
-"Static Analysis",
-"Vertical Analysis",
-"Internal Analysis"
+"Issue of shares",
+"Loan taken",
+"Sale of fixed assets",
+"Rent received"
+],
+correct: 4
+},
+{
+id: 18,
+question: "Average Collection Period is calculated from:",
+options: [
+"Credit sales",
+"Total sales",
+"Cash sales",
+"Net profit"
 ],
 correct: 1
 },
 {
-id: 18,
-question: "Current Ratio is a:",
-options: [
-"Solvency Ratio",
-"Liquidity Ratio",
-"Activity Ratio",
-"Profitability Ratio"
-],
-correct: 2
-},
-{
 id: 19,
-question: "The ideal Liquid Ratio is:",
+question: "When shares are reissued at discount:",
 options: [
-"2:1",
-"1:1",
-"5:1",
-"1:2"
+"Capital reserve increases",
+"Share forfeiture decreases",
+"Share capital decreases",
+"Reserves decrease"
 ],
 correct: 2
 },
 {
 id: 20,
-question: "Inventory Turnover Ratio is calculated as:",
+question: "Workmen Compensation Reserve is transferred to:",
 options: [
-"Sales / Average Inventory",
-"Cost of Goods Sold / Average Inventory",
-"Gross Profit / Average Inventory",
-"Average Inventory / Cost of Goods Sold"
+"All partners’ capital",
+"Old partners’ capital",
+"New partners’ capital",
+"General reserve"
 ],
 correct: 2
 },
 {
 id: 21,
-question: "Cash Flow Statement is related to:",
+question: "Loss on reissue of forfeited shares is adjusted against:",
 options: [
-"AS-3",
-"AS-10",
-"AS-20",
-"AS-1"
+"Capital reserve",
+"Share forfeiture account",
+"General reserve",
+"Securities premium"
 ],
-correct: 1
+correct: 2
 },
 {
 id: 22,
-question: "Which of the following is an example of Cash Inflow from Financing Activities?",
+question: "Which is a non-cash transaction?",
 options: [
-"Sale of Machinery",
-"Issue of Shares",
-"Receipt of Dividend",
-"Cash Sales"
+"Purchase of land for cash",
+"Purchase of machinery by issue of shares",
+"Payment to creditors",
+"Receipt from debtors"
 ],
 correct: 2
 },
 {
 id: 23,
-question: "Payment of Income Tax is classified as:",
+question: "Minimum subscription as per SEBI is:",
 options: [
-"Operating Activity",
-"Investing Activity",
-"Financing Activity",
-"None of the above"
-],
-correct: 1
-},
-{
-id: 24,
-question: "Computerised Accounting System (CAS) helps in:",
-options: [
-"Timely reporting",
-"Accuracy",
-"Data Storage",
-"All of the above"
-],
-correct: 4
-},
-{
-id: 25,
-question: "A sub-system of AIS that deals with inventory is:",
-options: [
-"Sales system",
-"Purchase system",
-"Inventory sub-system",
-"Cash system"
+"80%",
+"85%",
+"90%",
+"95%"
 ],
 correct: 3
 },
 {
-id: 26,
-question: "The primary motive of a Not-for-Profit Organisation (NPO) is:",
+id: 24,
+question: "Profit on revaluation is transferred to:",
 options: [
-"Profit earning",
-"Service to society",
-"Distribution of dividend",
-"To help directors"
+"Old partners’ capital in old ratio",
+"New partners’ capital",
+"All partners equally",
+"Gaining partners"
 ],
-correct: 2
+correct: 1
 },
+
 {
-id: 27,
-question: "Subscription received in advance is a:",
+id: 25,
+question: "Calls in arrears is shown under:",
 options: [
-"Asset",
-"Liability",
-"Income",
-"Expense"
-],
-correct: 2
-},
-{
-id: 28,
-question: "Income and Expenditure Account records transactions of:",
-options: [
-"Revenue nature only",
-"Capital nature only",
-"Both Revenue and Capital",
-"Cash nature only"
+"Share capital (deduction)",
+"Reserves",
+"Current liabilities",
+"Non-current liabilities"
 ],
 correct: 1
 },
 {
-id: 29,
-question: "Entrance fees, unless stated otherwise, is treated as:",
+id: 26,
+question: "Current Ratio =",
 options: [
-"Capital Receipt",
-"Revenue Receipt",
-"Deferred Revenue Expenditure",
-"Liability"
+"Current Assets ÷ Current Liabilities",
+"Current Liabilities ÷ Current Assets",
+"Current Assets − Current Liabilities",
+"Current Assets × Current Liabilities"
+],
+correct: 1
+},
+{
+id: 27,
+question: "Partner’s salary is debited to:",
+options: [
+"Capital Account",
+"Current Account",
+"Profit & Loss Appropriation A/c",
+"Revaluation A/c"
+],
+correct: 3
+},
+{
+id: 28,
+question: "Window dressing refers to:",
+options: [
+"Fraud",
+"Manipulation of accounts",
+"Tax evasion",
+"Capital adjustment"
+],
+correct: 2
+},
+{
+id: 29,
+question: "Which activity generates maximum MCQs in CUET?",
+options: [
+"Trading Account",
+"Cash Flow Statement",
+"Journal Entries",
+"Trial Balance"
 ],
 correct: 2
 },
 {
 id: 30,
-question: "Specific Donation received by NPO is shown in:",
+question: "Realisation expenses paid by partner are debited to:",
 options: [
-"Income and Expenditure A/c",
-"Balance Sheet (Assets)",
-"Balance Sheet (Liabilities)",
-"Receipts and Payments A/c only"
+"Partner’s capital",
+"Realisation Account",
+"Bank Account",
+"P&L Account"
+],
+correct: 2
+},
+{
+id: 31,
+question: "Which ratio measures liquidity?",
+options: [
+"Debt-equity",
+"Proprietary",
+"Current ratio",
+"Stock turnover"
 ],
 correct: 3
 },
 {
-id: 31,
-question: "Average Profit method is used for:",
-options: [
-"Valuation of Goodwill",
-"Calculation of Capital",
-"Valuation of Stock",
-"Calculation of Tax"
-],
-correct: 1
-},
-{
 id: 32,
-question: "Accumulated profits at the time of admission are credited to:",
+question: "Goodwill appears in Balance Sheet under:",
 options: [
-"New Partner",
-"Old Partners in Old Ratio",
-"All Partners in New Ratio",
-"Revaluation A/c"
+"Current Assets",
+"Non-current Assets",
+"Reserves",
+"Capital"
 ],
 correct: 2
 },
 {
 id: 33,
-question: "Gaining Ratio is calculated at the time of:",
+question: "Interest on drawings is:",
 options: [
-"Admission",
-"Retirement/Death",
-"Incorporation",
-"Liquidation"
-],
-correct: 2
-},
-{
-id: 34,
-question: "Unrecorded assets, when realized, are credited to:",
-options: [
-"Realisation A/c",
-"Cash A/c",
-"Capital A/c",
-"Revaluation A/c"
-],
-correct: 1
-},
-{
-id: 35,
-question: "Public Subscription of shares includes:",
-options: [
-"Prospectus",
-"Application",
-"Allotment",
-"All of the above"
-],
-correct: 4
-},
-{
-id: 36,
-question: "Dividends are usually paid on:",
-options: [
-"Authorised Capital",
-"Issued Capital",
-"Called-up Capital",
-"Paid-up Capital"
-],
-correct: 4
-},
-{
-id: 37,
-question: "Own debentures are those debentures which a company:",
-options: [
-"Issues to public",
-"Cancels immediately",
-"Purchases from market and holds as investment",
-"None of the above"
-],
-correct: 3
-},
-{
-id: 38,
-question: "A company's Balance Sheet is prepared as per:",
-options: [
-"Schedule III Part I",
-"Schedule III Part II",
-"Table F",
-"Partnership Act"
-],
-correct: 1
-},
-{
-id: 39,
-question: "Trend Analysis is a tool for:",
-options: [
-"Short-term analysis",
-"Long-term analysis",
-"Ratio analysis",
-"None of the above"
-],
-correct: 2
-},
-{
-id: 40,
-question: "Operating Ratio + Operating Profit Ratio =",
-options: [
-"100%",
-"50%",
-"0%",
-"200%"
-],
-correct: 1
-},
-{
-id: 41,
-question: "Proprietary Ratio shows relationship between:",
-options: [
-"Shareholders' Funds and Total Assets",
-"Debt and Equity",
-"Current Assets and Current Liabilities",
-"Fixed Assets and Long-term debt"
-],
-correct: 1
-},
-{
-id: 42,
-question: "Cash equivalents include:",
-options: [
-"Treasury Bills",
-"Commercial Papers",
-"Short-term deposits",
-"All of the above"
-],
-correct: 4
-},
-{
-id: 43,
-question: "Increase in Current Liabilities results in:",
-options: [
-"Increase in Cash",
-"Decrease in Cash",
-"No change in Cash",
-"Decrease in Revenue"
-],
-correct: 1
-},
-{
-id: 44,
-question: "DBMS stands for:",
-options: [
-"Data Business Management System",
-"Database Management System",
-"Digital Base Management System",
-"None of the above"
-],
-correct: 2
-},
-{
-id: 45,
-question: "The sequence of steps in AIS is:",
-options: [
-"Data Input -> Processing -> Output",
-"Output -> Processing -> Data Input",
-"Processing -> Output -> Data Input",
-"Data Input -> Output -> Processing"
-],
-correct: 1
-},
-{
-id: 46,
-question: "Which of the following is a component of a Computerised Accounting System?",
-options: [
-"Hardware",
-"Software",
-"People",
-"All of the above"
-],
-correct: 4
-},
-{
-id: 47,
-question: "Securities Premium can be used for:",
-options: [
-"Issue of fully paid bonus shares",
-"Writing off preliminary expenses",
-"Buy back of own shares",
-"All of the above"
-],
-correct: 4
-},
-{
-id: 48,
-question: "Profit on forfeiture of shares is transferred to:",
-options: [
-"General Reserve",
-"Capital Reserve",
-"Capital A/c",
-"Revenue Reserve"
-],
-correct: 2
-},
-{
-id: 49,
-question: "Interest on Drawings is for the firm:",
-options: [
-"Loss",
-"Income",
 "Expense",
+"Income",
+"Asset",
 "Liability"
 ],
 correct: 2
 },
 {
-id: 50,
-question: "Which of the following is a capital receipt for an NPO?",
+id: 34,
+question: "Which account is prepared on dissolution?",
 options: [
-"Life Membership Fees",
-"Annual Subscription",
-"Interest on investment",
-"Sale of old newspapers"
+"Capital account",
+"Revaluation account",
+"Realisation account",
+"P&L appropriation"
 ],
-correct: 1
+correct: 3
+},
+{
+id: 35,
+question: "Sale of old furniture for cash is:",
+options: [
+"Operating inflow",
+"Investing inflow",
+"Financing inflow",
+"Non-cash"
+],
+correct: 2
+},
+{
+id: 36,
+question: "Authorised capital means:",
+options: [
+"Capital issued to public",
+"Capital called",
+"Maximum capital allowed",
+"Paid-up capital"
+],
+correct: 3
+},
+{
+id: 37,
+question: "Capital reserve arises from:",
+options: [
+"Operating profit",
+"Revenue profit",
+"Capital profit",
+"Cash profit"
+],
+correct: 3
+},
+{
+id: 38,
+question: "Which is NOT included in cash equivalents?",
+options: [
+"Treasury bills",
+"Commercial paper",
+"Bank overdraft",
+"Marketable securities"
+],
+correct: 3
+},
+{
+id: 39,
+question: "On admission of a partner, accumulated profits are:",
+options: [
+"Ignored",
+"Transferred to old partners",
+"Given to new partner",
+"Written off"
+],
+correct: 2
+},
+{
+id: 40,
+question: "Computerised Accounting System includes:",
+options: [
+"Hardware only",
+"Software only",
+"Data, People, Hardware, Software",
+"Coding only"
+],
+correct: 3
+},
+{
+id: 41,
+question: "Which ratio is an activity ratio?",
+options: [
+"Current ratio",
+"Debt-equity ratio",
+"Inventory turnover ratio",
+"Proprietary ratio"
+],
+correct: 3
+},
+{
+id: 42,
+question: "Net Profit is transferred to:",
+options: [
+"Capital Account",
+"P&L Appropriation Account",
+"Revaluation Account",
+"Balance Sheet"
+],
+correct: 2
+},
+
+{
+id: 43,
+question: "Which is NOT a feature of partnership?",
+options: [
+"Mutual agency",
+"Unlimited liability",
+"Separate legal entity",
+"Agreement"
+],
+correct: 3
+},
+{
+id: 44,
+question: "Interest on calls in arrears is charged at:",
+options: [
+"5%",
+"6%",
+"10%",
+"12%"
+],
+correct: 4
+},
+{
+id: 45,
+question: "Under fixed capital method:",
+options: [
+"Capital changes frequently",
+"Current account is maintained",
+"Capital account is not maintained",
+"Only one account per partner"
+],
+correct: 2
+},
+{
+id: 46,
+question: "Cash Flow from Operating Activities is prepared using:",
+options: [
+"Direct method only",
+"Indirect method only",
+"Both methods",
+"None"
+],
+correct: 3
+},
+{
+id: 47,
+question: "Which is NOT shown in Realisation Account?",
+options: [
+"Assets sold",
+"Liabilities paid",
+"Capital balances",
+"Realisation expenses"
+],
+correct: 3
+},
+{
+id: 48,
+question: "Debenture Redemption Reserve is created out of:",
+options: [
+"Capital profit",
+"Revenue profit",
+"Securities premium",
+"Share forfeiture"
+],
+correct: 2
+},
+{
+id: 49,
+question: "Proprietary Ratio shows:",
+options: [
+"Liquidity",
+"Profitability",
+"Long-term solvency",
+"Efficiency"
+],
+correct: 3
+},
+{
+id: 50,
+question: "Which statement is TRUE?",
+options: [
+"All receipts are income",
+"All payments are expenses",
+"All expenses are payments",
+"All income is receipt"
+],
+correct: 3
 }
 ];
