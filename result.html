@@ -1,78 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Score Card</title>
-<link rel="stylesheet" href="result.css">
+    <meta charset="UTF-8">
+    <title>Final Result - CUET Mock</title>
+    <link rel="stylesheet" href="result.css">
+    <style>
+        .stats-container { display: flex; gap: 10px; margin-bottom: 20px; text-align: center; }
+        .stat-box { flex: 1; padding: 15px; border: 1px solid #ccc; border-radius: 8px; background: #f9f9f9; }
+        .correct-row { background-color: #d4edda !important; }
+        .wrong-row { background-color: #f8d7da !important; }
+        .unattempted-row { background-color: #fff3cd !important; }
+        .score-val { font-size: 24px; font-weight: bold; color: #0b4ea2; }
+    </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <div class="candidate">
-    <div>Candidate Name : <b>Your Name</b></div>
-    <div>Exam Name : <b>CUET UG</b></div>
-    <div>Subject Name : <b>ACCOUNTANCY</b></div>
-    <div>Remaining Time :
-      <span id="timer">TIME OVER</span>
+<div class="header" style="padding:20px; border-bottom: 4px solid #0b4ea2;">
+    <h2>Performance Report</h2>
+</div>
+
+<div style="width: 90%; margin: 20px auto;">
+    <div class="stats-container">
+        <div class="stat-box">Total<br><span id="totalQ">0</span></div>
+        <div class="stat-box">Correct<br><span id="correct" style="color:green">0</span></div>
+        <div class="stat-box">Wrong<br><span id="wrong" style="color:red">0</span></div>
+        <div class="stat-box">Skipped<br><span id="unattempted" style="color:orange">0</span></div>
+        <div class="stat-box">Final Score<br><span id="score" class="score-val">0</span></div>
     </div>
-  </div>
+
+    <table border="1" style="width:100%; border-collapse: collapse; text-align: center;">
+        <thead>
+            <tr style="background:#0b4ea2; color:white;">
+                <th>Q. No.</th>
+                <th>Your Answer</th>
+                <th>Status</th>
+                <th>Correct Answer</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    
+    <br>
+    <button onclick="window.location.href='index.html'" style="padding:10px 20px; cursor:pointer;">RETAKE TEST</button>
 </div>
-
-<!-- FEEDBACK BAR -->
-<div class="top-bar">
-  <span class="feedback">Please provide your valuable feedback about Mock Test:</span>
-  <button class="feedback-btn">STUDENT FEEDBACK</button>
-  <button class="back-btn" onclick="history.back()">BACK</button>
-</div>
-
-<!-- SCORE CARD -->
-<div class="card">
-<h2>Score Card</h2>
-
-<table class="score-table">
-<tr>
-  <td>Total Question</td><td id="totalQ">50</td>
-</tr>
-<tr>
-  <td>Correct Answers</td><td id="correct">0</td>
-</tr>
-<tr>
-  <td>Score</td><td id="score">-1</td>
-</tr>
-</table>
-</div>
-
-<!-- TABLE -->
-<div class="table-box">
-<div class="table-controls">
-  Show
-  <select id="limit" onchange="render()">
-    <option value="10">10</option>
-    <option value="25">25</option>
-    <option value="50">50</option>
-  </select>
-  entries
-</div>
-
-<table class="result-table">
-<thead>
-<tr>
-  <th>Question No.</th>
-  <th>Selected Option</th>
-  <th>Status</th>
-  <th>Correct Option</th>
-</tr>
-</thead>
-<tbody id="tbody"></tbody>
-</table>
-
-<div class="pagination" id="pagination"></div>
-</div>
-
-<footer>
-© All Rights Reserved - National Testing Agency
-</footer>
 
 <script src="result.js"></script>
 </body>
