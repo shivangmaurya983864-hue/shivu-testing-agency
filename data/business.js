@@ -1,128 +1,253 @@
 const questions = [
 {
 id: 1,
-question: "Which of the following states that a specific and definite action is to be taken or not to be taken?",
+question: "Which function of management ensures that activities are performed as per plans?",
 options: [
-"Rule",
-"Policy",
-"Strategy",
-"Procedure"
+"Planning",
+"Organising",
+"Directing",
+"Controlling"
 ],
-correct: 1
+correct: 4
 },
 {
 id: 2,
-question: "The process of holding securities in electronic form is known as:",
+question: "The process of grouping similar activities together is known as:",
 options: [
-"Dematerialisation",
-"Rematerialisation",
-"Speculation",
-"None of these"
+"Departmentalisation",
+"Delegation",
+"Decentralisation",
+"Coordination"
 ],
 correct: 1
 },
 {
 id: 3,
-question: "Which management function involves setting objectives and deciding how to achieve them?",
+question: "Principles of management are not:",
 options: [
-"Organising",
-"Directing",
-"Planning",
-"Controlling"
+"Universal",
+"Flexible",
+"Absolute",
+"Behavioural"
 ],
 correct: 3
 },
 {
 id: 4,
-question: "The process of guiding the efforts of employees to accomplish desired goals is:",
+question: "Who is known as the father of General Management?",
 options: [
-"Supervision",
-"Communication",
-"Leadership",
-"Motivation"
+"F.W. Taylor",
+"Henri Fayol",
+"Peter Drucker",
+"Max Weber"
+],
+correct: 2
+},
+{
+id: 5,
+question: "Which of the following is an example of a social environment?",
+options: [
+"Money supply in the economy",
+"Consumer Protection Act",
+"Composition of family",
+"Constitution of the country"
 ],
 correct: 3
 },
 {
-id: 5,
-question: "Which of the following is not an element of delegation?",
-options: [
-"Accountability",
-"Authority",
-"Responsibility",
-"Informal Organization"
-],
-correct: 4
-},
-{
 id: 6,
-question: "Capital budgeting decisions are related to:",
+question: "Planning is the ________ function of management.",
 options: [
-"Fixed Assets",
-"Current Assets",
-"Current Liabilities",
-"None of these"
+"First",
+"Second",
+"Third",
+"Last"
 ],
 correct: 1
 },
 {
 id: 7,
-question: "The simplest form of organization structure is:",
+question: "Which of the following is a single-use plan?",
 options: [
-"Functional",
-"Divisional",
-"Line",
-"Matrix"
+"Policy",
+"Procedure",
+"Budget",
+"Method"
 ],
-correct: 1
+correct: 3
 },
 {
 id: 8,
-question: "Marketing mix does not include:",
+question: "Delegation of authority involves:",
 options: [
-"Product",
-"Price",
-"Promotion",
-"Production"
+"Responsibility",
+"Authority",
+"Accountability",
+"All of the above"
 ],
 correct: 4
 },
 {
 id: 9,
-question: "Which of the following is a financial incentive?",
+question: "Which organization structure is suitable for a large organization with multiple products?",
 options: [
-"Promotion",
-"Stock Incentive",
-"Job Security",
-"Employee Recognition"
+"Functional",
+"Divisional",
+"Formal",
+"Informal"
 ],
 correct: 2
 },
 {
 id: 10,
-question: "The primary aim of financial management is to:",
+question: "The first step in the staffing process is:",
 options: [
-"Maximise profits",
-"Maximise wealth of shareholders",
-"Minimise costs",
-"None of these"
-],
-correct: 2
-},
-{
-id: 11,
-question: "Consumer Protection Act was passed in the year:",
-options: [
-"1986",
-"1991",
-"2019",
-"1947"
+"Recruitment",
+"Selection",
+"Estimating manpower requirements",
+"Training"
 ],
 correct: 3
 },
 {
+id: 11,
+question: "Internal source of recruitment includes:",
+options: [
+"Campus recruitment",
+"Promotion",
+"Placement agencies",
+"Advertising"
+],
+correct: 2
+},
+{
 id: 12,
-question: "SEBI was established in the year:",
+question: "On-the-job training method includes:",
+options: [
+"Vestibule training",
+"Apprenticeship",
+"Case study",
+"Films"
+],
+correct: 2
+},
+{
+id: 13,
+question: "Motivation is a ________ process.",
+options: [
+"Physical",
+"Psychological",
+"Financial",
+"Technical"
+],
+correct: 2
+},
+{
+id: 14,
+question: "Which style of leadership involves no interference by the leader?",
+options: [
+"Autocratic",
+"Democratic",
+"Laissez-faire",
+"Paternalistic"
+],
+correct: 3
+},
+{
+id: 15,
+question: "The highest level of need in Maslow's hierarchy is:",
+options: [
+"Safety needs",
+"Belongingness needs",
+"Self-actualization needs",
+"Esteem needs"
+],
+correct: 3
+},
+
+
+[Image of Maslow's hierarchy of needs]
+
+{
+id: 16,
+question: "Controlling is a ________ function.",
+options: [
+"Forward looking",
+"Backward looking",
+"Both 1 and 2",
+"None of the above"
+],
+correct: 3
+},
+{
+id: 17,
+question: "Financial management is concerned with:",
+options: [
+"Investment decisions",
+"Financing decisions",
+"Dividend decisions",
+"All of the above"
+],
+correct: 4
+},
+{
+id: 18,
+question: "Fixed capital requirements are higher in:",
+options: [
+"Trading concerns",
+"Manufacturing concerns",
+"Service sector",
+"None of the above"
+],
+correct: 2
+},
+{
+id: 19,
+question: "Working capital formula is:",
+options: [
+"Current Assets - Current Liabilities",
+"Total Assets - Total Liabilities",
+"Fixed Assets - Current Assets",
+"None of the above"
+],
+correct: 1
+},
+{
+id: 20,
+question: "Money market deals in:",
+options: [
+"Long term funds",
+"Short term funds",
+"Medium term funds",
+"None of the above"
+],
+correct: 2
+},
+{
+id: 21,
+question: "Which instrument is also known as a zero-coupon bond?",
+options: [
+"Commercial paper",
+"Treasury bill",
+"Call money",
+"Certificate of deposit"
+],
+correct: 2
+},
+{
+id: 22,
+question: "The primary market is also known as:",
+options: [
+"Stock exchange",
+"New issue market",
+"Secondary market",
+"Over the counter market"
+],
+correct: 2
+},
+{
+id: 23,
+question: "SEBI was established in:",
 options: [
 "1988",
 "1992",
@@ -132,421 +257,304 @@ options: [
 correct: 2
 },
 {
-id: 13,
-question: "The first step in the process of selection is:",
-options: [
-"Selection Test",
-"Medical Examination",
-"Preliminary Screening",
-"Employment Interview"
-],
-correct: 3
-},
-{
-id: 14,
-question: "Grouping of activities on the basis of functions is a part of:",
-options: [
-"Decentralisation",
-"Functional Structure",
-"Divisional Structure",
-"Centralisation"
-],
-correct: 2
-},
-{
-id: 15,
-question: "Staffing is a part of:",
-options: [
-"Human Resource Management",
-"Marketing Management",
-"Financial Management",
-"None of these"
-],
-correct: 1
-},
-{
-id: 16,
-question: "Management is:",
-options: [
-"An Art",
-"A Science",
-"Both Art and Science",
-"Neither Art nor Science"
-],
-correct: 3
-},
-{
-id: 17,
-question: "Principles of management are not:",
-options: [
-"Universal",
-"Flexible",
-"Absolute",
-"Behavioral"
-],
-correct: 3
-},
-{
-id: 18,
-question: "Who is known as the father of Scientific Management?",
-options: [
-"Henri Fayol",
-"F.W. Taylor",
-"Peter Drucker",
-"Max Weber"
-],
-correct: 2
-},
-{
-id: 19,
-question: "Which of the following is a barrier to communication?",
-options: [
-"Semantic barrier",
-"Psychological barrier",
-"Organizational barrier",
-"All of these"
-],
-correct: 4
-},
-{
-id: 20,
-question: "Planning is:",
-options: [
-"Goal oriented",
-"Future oriented",
-"Mental exercise",
-"All of these"
-],
-correct: 4
-},
-{
-id: 21,
-question: "Span of management refers to:",
-options: [
-"Number of managers",
-"Length of term",
-"Number of subordinates under a superior",
-"None of these"
-],
-correct: 3
-},
-{
-id: 22,
-question: "Which of the following is an external source of recruitment?",
-options: [
-"Promotion",
-"Transfer",
-"Campus Recruitment",
-"None of these"
-],
-correct: 3
-},
-{
-id: 23,
-question: "Control function of management is:",
-options: [
-"Forward looking",
-"Backward looking",
-"Both forward and backward looking",
-"None of these"
-],
-correct: 3
-},
-{
 id: 24,
-question: "Working capital means:",
+question: "Marketing mix includes 4 Ps: Product, Price, Place and ________.",
 options: [
-"Total Assets",
-"Fixed Assets",
-"Current Assets - Current Liabilities",
-"None of these"
+"People",
+"Promotion",
+"Package",
+"Publicity"
 ],
-correct: 3
+correct: 2
 },
+
+
+[Image of the 4 Ps of marketing mix]
+
 {
 id: 25,
-question: "Stock Exchange is also called:",
+question: "The tag line 'Taste of India' belongs to:",
 options: [
-"Primary Market",
-"Secondary Market",
-"Money Market",
-"None of these"
+"Mother Dairy",
+"Amul",
+"Nestle",
+"Britannia"
 ],
 correct: 2
 },
 {
 id: 26,
-question: "The right of a consumer to get relief against unfair trade practices is:",
+question: "Which of the following is not a consumer right?",
 options: [
 "Right to safety",
-"Right to seek redressal",
 "Right to be heard",
-"Right to choose"
-],
-correct: 2
-},
-{
-id: 27,
-question: "Formal communication is:",
-options: [
-"Slow",
-"Fast",
-"Documented",
-"Both 1 and 3"
+"Right to seek redressal",
+"Right to get free samples"
 ],
 correct: 4
 },
 {
-id: 28,
-question: "Fayol's principle of 'Esprit de corps' means:",
+id: 27,
+question: "The maximum limit of compensation for District Commission is:",
 options: [
-"Order",
-"Team spirit",
-"Discipline",
-"Equity"
+"Up to ₹1 crore",
+"Up to ₹50 lakh",
+"Up to ₹2 crore",
+"Up to ₹10 lakh"
+],
+correct: 1
+},
+{
+id: 28,
+question: "Entrepreneurship is a process of:",
+options: [
+"Job seeking",
+"Risk taking and innovation",
+"Working under someone",
+"None of the above"
 ],
 correct: 2
 },
 {
 id: 29,
-question: "Which environment includes laws and legislations?",
+question: "The person who heads a company is usually called:",
 options: [
-"Social",
-"Economic",
-"Legal",
-"Political"
+"CFO",
+"CEO",
+"COO",
+"CMO"
+],
+correct: 2
+},
+{
+id: 30,
+question: "Which function ensures that the right people are at the right place?",
+options: [
+"Planning",
+"Organising",
+"Staffing",
+"Directing"
 ],
 correct: 3
 },
 {
-id: 30,
-question: "Decentralisation is:",
-options: [
-"Extension of delegation",
-"Compulsory",
-"Narrow in scope",
-"None of these"
-],
-correct: 1
-},
-{
 id: 31,
-question: "A network of social relationships that arise spontaneously is called:",
+question: "Fayol's principle 'Unity of Command' states that:",
 options: [
-"Formal Organization",
-"Informal Organization",
-"Functional Structure",
-"Divisional Structure"
+"One head one plan",
+"One subordinate one superior",
+"Equal pay for equal work",
+"Team spirit"
 ],
 correct: 2
 },
 {
 id: 32,
-question: "Training is a process of:",
+question: "Demonetization took place in India in:",
 options: [
-"Increasing knowledge",
-"Increasing skills",
-"Changing attitude",
-"All of these"
-],
-correct: 4
-},
-{
-id: 33,
-question: "Autocratic leadership is also known as:",
-options: [
-"Authoritarian",
-"Democratic",
-"Free-rein",
-"None of these"
-],
-correct: 1
-},
-{
-id: 34,
-question: "The standard of measurement in controlling is:",
-options: [
-"Qualitative",
-"Quantitative",
-"Both 1 and 2",
-"None of these"
+"2014",
+"2015",
+"2016",
+"2017"
 ],
 correct: 3
 },
 {
-id: 35,
-question: "Financial leverage is also called:",
+id: 33,
+question: "Planning is an ________ activity.",
 options: [
-"Trading on equity",
-"Operating leverage",
-"Combined leverage",
-"None of these"
-],
-correct: 1
-},
-{
-id: 36,
-question: "Money market deals in:",
-options: [
-"Short term funds",
-"Long term funds",
-"Medium term funds",
-"All of these"
-],
-correct: 1
-},
-{
-id: 37,
-question: "Treasury bills are issued by:",
-options: [
-"Commercial Banks",
-"RBI",
-"Private Companies",
-"SEBI"
+"Physical",
+"Intellectual",
+"Manual",
+"Social"
 ],
 correct: 2
 },
 {
-id: 38,
-question: "Branding helps in:",
+id: 34,
+question: "Span of management refers to:",
 options: [
-"Product differentiation",
+"Number of managers",
+"Number of subordinates a superior can manage",
+"Working hours",
+"None of the above"
+],
+correct: 2
+},
+{
+id: 35,
+question: "The most expensive source of recruitment is:",
+options: [
+"Promotion",
+"Transfer",
 "Advertising",
-"Pricing",
-"All of these"
+"Direct recruitment"
+],
+correct: 3
+},
+{
+id: 36,
+question: "Which of the following is a barrier to communication?",
+options: [
+"Semantic barrier",
+"Psychological barrier",
+"Personal barrier",
+"All of the above"
 ],
 correct: 4
 },
 {
-id: 39,
-question: "Who is the 'King' in the modern marketing concept?",
+id: 37,
+question: "The last step in the controlling process is:",
 options: [
-"Producer",
-"Wholesaler",
-"Consumer",
-"Retailer"
+"Setting standards",
+"Measurement of performance",
+"Taking corrective action",
+"Comparison"
+],
+correct: 3
+},
+{
+id: 38,
+question: "Dividend decision is about:",
+options: [
+"Purchase of assets",
+"Distribution of profits",
+"Raising of funds",
+"None of the above"
+],
+correct: 2
+},
+{
+id: 39,
+question: "Which market has no physical location?",
+options: [
+"Primary market",
+"Secondary market",
+"Over the counter market",
+"None of the above"
 ],
 correct: 3
 },
 {
 id: 40,
-question: "Redressal agencies under Consumer Protection Act are:",
+question: "Labeling helps in:",
 options: [
-"District Commission",
-"State Commission",
-"National Commission",
-"All of these"
+"Product identification",
+"Grading",
+"Promotion",
+"All of the above"
 ],
 correct: 4
 },
 {
 id: 41,
-question: "Unity of Command means:",
+question: "A brand that is registered is called:",
 options: [
-"One head one plan",
-"Subordinate should receive orders from one superior only",
-"One head many plans",
-"None of these"
+"Brand mark",
+"Trademark",
+"Copy",
+"Logo"
 ],
 correct: 2
 },
 {
 id: 42,
-question: "Liberalization means:",
+question: "Consumer Protection Act 2019 replaced the act of:",
 options: [
-"Integration among economies",
-"Reduced government controls and restrictions",
-"Policy of planned disinvestments",
-"None of these"
+"1980",
+"1986",
+"1990",
+"1996"
 ],
 correct: 2
 },
 {
 id: 43,
-question: "Method of on-the-job training is:",
+question: "A network of social relationships at work is:",
 options: [
-"Apprenticeship",
-"Internship",
-"Coaching",
-"All of these"
-],
-correct: 4
-},
-{
-id: 44,
-question: "The highest level of Maslow's hierarchy of needs is:",
-options: [
-"Safety needs",
-"Self-actualization",
-"Esteem needs",
-"Social needs"
+"Formal organization",
+"Informal organization",
+"Functional structure",
+"None of the above"
 ],
 correct: 2
 },
 {
-id: 45,
-question: "Commercial paper is an:",
+id: 44,
+question: "Training increases ________ of employees.",
 options: [
-"Unsecured promissory note",
-"Secured note",
-"Government security",
-"None of these"
+"Knowledge",
+"Skills",
+"Efficiency",
+"All of the above"
+],
+correct: 4
+},
+{
+id: 45,
+question: "Directing flows in which direction?",
+options: [
+"Upward",
+"Downward",
+"Horizontal",
+"Diagonal"
+],
+correct: 2
+},
+{
+id: 46,
+question: "Debt-Equity ratio is a measure of:",
+options: [
+"Liquidity",
+"Solvency",
+"Profitability",
+"Activity"
+],
+correct: 2
+},
+{
+id: 47,
+question: "Commercial paper usually has a maturity period of:",
+options: [
+"1 to 2 years",
+"15 days to 1 year",
+"More than 5 years",
+"None of the above"
+],
+correct: 2
+},
+{
+id: 48,
+question: "Retained earnings is a/an ________ source of finance.",
+options: [
+"Internal",
+"External",
+"Short term",
+"None of the above"
 ],
 correct: 1
 },
 {
-id: 46,
-question: "Physical distribution includes:",
-options: [
-"Transportation",
-"Inventory control",
-"Warehousing",
-"All of these"
-],
-correct: 4
-},
-{
-id: 47,
-question: "Labeling is:",
-options: [
-"Compulsory",
-"Wastage of money",
-"A part of packaging",
-"None of these"
-],
-correct: 3
-},
-{
-id: 48,
-question: "A brand or part of a brand that is given legal protection is called:",
-options: [
-"Brand mark",
-"Trademark",
-"Logo",
-"Copyright"
-],
-correct: 2
-},
-{
 id: 49,
-question: "Fixed capital is required for:",
+question: "The core purpose of financial planning is to ensure:",
 options: [
-"Day to day expenses",
-"Purchase of land",
-"Payment of salaries",
-"Purchase of raw materials"
+"High profits",
+"Availability of funds when needed",
+"Minimum taxes",
+"None of the above"
 ],
 correct: 2
 },
 {
 id: 50,
-question: "Which of the following is not a part of the internal environment?",
+question: "Financial planning helps in:",
 options: [
-"Objectives",
-"Policies",
-"Customers",
-"Organization Structure"
+"Resource allocation",
+"Forecasting",
+"Avoiding business shocks",
+"All of the above"
 ],
-correct: 3
+correct: 4
 }
 ];
