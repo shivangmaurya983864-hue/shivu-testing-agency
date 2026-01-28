@@ -1,88 +1,76 @@
 const examResult = JSON.parse(localStorage.getItem("examResult"));
 
 if (!examResult) {
-  alert("Exam data not found!");
-  location.href = "exam.html";
+    alert("Result data nahi mila!");
+    window.location.href = "index.html";
 }
 
 const { questions, answers } = examResult;
 
-const TOTAL_QUESTIONS = questions.length;
-const MARKS_CORRECT = 1;
-const MARKS_WRONG = -1;
+let stats = {
+    total: questions.length,
+    correct: 0,
+    wrong: 0,
+    unattempted: 0,
+    score: 0
+};
 
-let correct = 0;
-let score = 0;
-
+// --- LOGIC: DATA SE MATCH KARNA ---
 questions.forEach((q, i) => {
-  if (answers[i] !== null) {
-    if (answers[i] === q.correct) {
-      correct++;
-      score += MARKS_CORRECT;
+    const userSelection = answers[i]; // 0, 1, 2, or 3
+    const correctIndex = Number(q.correct) - 1; // 1-based data ko 0-based index banaya
+
+    if (userSelection === null || userSelection === undefined) {
+        stats.unattempted++;
+    } else if (userSelection === correctIndex) {
+        stats.correct++;
+        stats.score += 5; // Sahi ke +5 (CUET Style)
     } else {
-      score += MARKS_WRONG;
+        stats.wrong++;
+        stats.score -= 1; // Galat ka -1
     }
-  }
 });
 
-document.getElementById("totalQ").innerText = TOTAL_QUESTIONS;
-document.getElementById("correct").innerText = correct;
-document.getElementById("score").innerText = score;
+// UI Update
+document.getElementById("totalQ").innerText = stats.total;
+document.getElementById("correct").innerText = stats.correct;
+document.getElementById("wrong").innerText = stats.wrong;
+document.getElementById("unattempted").innerText = stats.unattempted;
+document.getElementById("score").innerText = stats.score;
 
-let page = 1;
-
+// --- TABLE RENDERING ---
 function render() {
-  const limit = Number(document.getElementById("limit").value);
-  const tbody = document.getElementById("tbody");
-  tbody.innerHTML = "";
+    const tbody = document.getElementById("tbody");
+    tbody.innerHTML = "";
 
-  const start = (page - 1) * limit;
-  const end = Math.min(start + limit, TOTAL_QUESTIONS);
+    questions.forEach((q, i) => {
+        const userSelection = answers[i];
+        const correctIdx = Number(q.correct) - 1;
+        
+        const userText = userSelection === null ? "---" : String.fromCharCode(65 + userSelection);
+        const correctText = String.fromCharCode(65 + correctIdx);
+        
+        let statusClass = "unattempted-row";
+        let statusText = "Skipped";
 
-  for (let i = start; i < end; i++) {
-    const selected =
-      answers[i] === null ? "---" : String.fromCharCode(65 + answers[i]);
+        if (userSelection !== null) {
+            if (userSelection === correctIdx) {
+                statusClass = "correct-row";
+                statusText = "CORRECT";
+            } else {
+                statusClass = "wrong-row";
+                statusText = "WRONG";
+            }
+        }
 
-    const status =
-      answers[i] === null
-        ? "NOT ANSWERED"
-        : answers[i] === questions[i].correct
-        ? "CORRECT"
-        : "WRONG";
-
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${i + 1}</td>
-      <td>${selected}</td>
-      <td class="${status === "WRONG" ? "wrong" : "correct"}">${status}</td>
-      <td>${String.fromCharCode(65 + questions[i].correct)}</td>
-    `;
-    tbody.appendChild(tr);
-  }
-
-  renderPagination(limit);
+        tbody.innerHTML += `
+            <tr class="${statusClass}">
+                <td>${i + 1}</td>
+                <td>${userText}</td>
+                <td><b>${statusText}</b></td>
+                <td>${correctText}</td>
+            </tr>`;
+    });
 }
 
-function renderPagination(limit) {
-  const pages = Math.ceil(TOTAL_QUESTIONS / limit);
-  const pagination = document.getElementById("pagination");
-  pagination.innerHTML = "";
-
-  for (let i = 1; i <= pages; i++) {
-    const span = document.createElement("span");
-    span.innerText = i;
-    span.style.cursor = "pointer";
-    span.style.margin = "0 6px";
-
-    if (i === page) span.style.fontWeight = "bold";
-
-    span.onclick = () => {
-      page = i;
-      render();
-    };
-
-    pagination.appendChild(span);
-  }
-}
-
-render();
+window.onload = render;
