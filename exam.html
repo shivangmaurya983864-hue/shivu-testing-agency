@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shivu Testing Agency - Exam</title>
+  <link rel="stylesheet" href="exam.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">
+    <h2>Shivu Testing Agency</h2>
+    <span>Excellence & Assessment</span>
+  </div>
+
+  <div class="candidate">
+    <div>Candidate Name : <b>Vandana Gupta</b></div>
+    <div>Exam Name : <b>CUET UG</b></div>
+    <div>Subject Name : <b id="subjectName">---</b></div>
+    <div>Remaining Time :
+      <span id="timer">01:00:00</span>
+    </div>
+  </div>
+
+  <div class="lang">
+    <select>
+      <option>English</option>
+    </select>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- QUESTION AREA -->
+  <div class="question-box">
+    <h3 id="qno">Question 1:</h3>
+    <p id="questionText"></p>
+
+    <div id="options"></div>
+
+    <div class="buttons">
+      <button onclick="prevQuestion()"><< BACK</button>
+      <button class="green" onclick="saveAndNext()">SAVE & NEXT</button>
+      <button onclick="clearResponse()">CLEAR</button>
+      <button class="orange" onclick="markForReview()">SAVE & MARK FOR REVIEW</button>
+      <button class="blue" onclick="markForReviewNext()">MARK FOR REVIEW & NEXT</button>
+      <button class="green" onclick="submitExam()">SUBMIT</button>
+    </div>
+  </div>
+
+  <!-- PALETTE -->
+  <div class="palette">
+    <div class="legend">
+      <div><span class="box notVisited"></span> Not Visited</div>
+      <div><span class="box notAnswered"></span> Not Answered</div>
+      <div><span class="box answered"></span> Answered</div>
+      <div><span class="box marked"></span> Marked for Review</div>
+      <div><span class="box answeredMarked"></span> Answered & Marked</div>
+    </div>
+
+    <div class="grid" id="paletteGrid"></div>
+  </div>
+
+</div>
+
+<!-- 🔥 SUBJECT DATA LOAD -->
+<script>
+  const subject = localStorage.getItem("selectedSubject");
+
+  if (subject === "accountancy") {
+    document.write('<script src="data/accountancy.js"><\/script>');
+    document.getElementById("subjectName").innerText = "ACCOUNTANCY";
+  } else if (subject === "economics") {
+    document.write('<script src="data/economics.js"><\/script>');
+    document.getElementById("subjectName").innerText = "ECONOMICS";
+  } else if (subject === "business") {
+    document.write('<script src="data/business.js"><\/script>');
+    document.getElementById("subjectName").innerText = "BUSINESS STUDIES";
+  } else {
+    alert("Subject not selected!");
+  }
+</script>
+
+<script src="exam.js"></script>
+</body>
+</html>

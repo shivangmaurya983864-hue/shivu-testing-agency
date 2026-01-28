@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Score Card</title>
+<link rel="stylesheet" href="result.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="candidate">
+    <div>Candidate Name : <b>Your Name</b></div>
+    <div>Exam Name : <b>CUET UG</b></div>
+    <div>Subject Name : <b>ACCOUNTANCY</b></div>
+    <div>Remaining Time :
+      <span id="timer">TIME OVER</span>
+    </div>
+  </div>
+</div>
+
+<!-- FEEDBACK BAR -->
+<div class="top-bar">
+  <span class="feedback">Please provide your valuable feedback about Mock Test:</span>
+  <button class="feedback-btn">STUDENT FEEDBACK</button>
+  <button class="back-btn" onclick="history.back()">BACK</button>
+</div>
+
+<!-- SCORE CARD -->
+<div class="card">
+<h2>Score Card</h2>
+
+<table class="score-table">
+<tr>
+  <td>Total Question</td><td id="totalQ">50</td>
+</tr>
+<tr>
+  <td>Correct Answers</td><td id="correct">0</td>
+</tr>
+<tr>
+  <td>Score</td><td id="score">-1</td>
+</tr>
+</table>
+</div>
+
+<!-- TABLE -->
+<div class="table-box">
+<div class="table-controls">
+  Show
+  <select id="limit" onchange="render()">
+    <option value="10">10</option>
+    <option value="25">25</option>
+    <option value="50">50</option>
+  </select>
+  entries
+</div>
+
+<table class="result-table">
+<thead>
+<tr>
+  <th>Question No.</th>
+  <th>Selected Option</th>
+  <th>Status</th>
+  <th>Correct Option</th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+
+<div class="pagination" id="pagination"></div>
+</div>
+
+<footer>
+© All Rights Reserved - National Testing Agency
+</footer>
+
+<script src="result.js"></script>
+</body>
+</html>
