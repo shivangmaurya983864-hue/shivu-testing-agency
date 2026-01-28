@@ -1,552 +1,559 @@
 const questions = [
 {
 id: 1,
-question: "Which of the following is a characteristic of a centrally planned economy?",
+question: "An increase in Bank Rate by RBI indicates:",
 options: [
-"Private ownership of means of production",
-"Decision making by the price mechanism",
-"Government ownership of means of production",
-"Focus on profit maximization"
+"Expansionary monetary policy",
+"Contractionary monetary policy",
+"Expansionary fiscal policy",
+"Neutral policy"
 ],
-correct: 3
+correct: 2
 },
 {
 id: 2,
-question: "The shape of the Production Possibility Frontier (PPF) is usually:",
+question: "GDP Deflator =",
 options: [
-"Concave to the origin",
-"Convex to the origin",
-"A straight line",
-"Downward sloping convex"
+"Nominal GDP ÷ Real GDP",
+"Real GDP ÷ Nominal GDP",
+"Nominal GDP − Real GDP",
+"Real GDP − Nominal GDP"
 ],
 correct: 1
 },
 {
 id: 3,
-question: "When the price of a substitute good rises, the demand for the given good:",
+question: "Which item is included in National Income?",
 options: [
-"Decreases",
-"Increases",
-"Remains constant",
-"None of the above"
+"Transfer payment",
+"Scholarship",
+"Profit earned by Indian firm abroad",
+"Income tax"
 ],
-correct: 2
+correct: 3
 },
+
+
+[Image of the circular flow of income]
+
 {
 id: 4,
-question: "Total Utility (TU) is maximum when Marginal Utility (MU) is:",
+question: "Repo rate is the rate at which RBI lends to banks for:",
 options: [
-"Positive",
-"Negative",
-"Zero",
-"Maximum"
+"Long period",
+"Very long period",
+"Short period",
+"Market period"
 ],
 correct: 3
 },
 {
 id: 5,
-question: "Which of the following goods have an inverse relationship between income and demand?",
+question: "Which is NOT a component of Current Account?",
 options: [
-"Normal goods",
-"Giffen goods",
-"Inferior goods",
-"Luxury goods"
+"Visible trade",
+"Invisible trade",
+"Transfer payments",
+"Foreign Direct Investment"
 ],
-correct: 3
+correct: 4
 },
 {
 id: 6,
-question: "The Law of Variable Proportions operates in the:",
+question: "Import tariff directly:",
 options: [
-"Long run",
-"Short run",
-"Market period",
-"None of the above"
+"Reduces domestic price",
+"Raises domestic price",
+"Increases exports",
+"Reduces government revenue"
 ],
 correct: 2
 },
 {
 id: 7,
-question: "Average Fixed Cost (AFC) curve is a:",
+question: "Human capital formation includes:",
 options: [
-"U-shaped curve",
-"Straight line",
-"Rectangular hyperbola",
-"Downward sloping convex"
+"Education & health",
+"Machines only",
+"Infrastructure",
+"Natural resources"
 ],
-correct: 3
+correct: 1
 },
 {
 id: 8,
-question: "A firm under Perfect Competition is a:",
+question: "Money Multiplier =",
 options: [
-"Price Maker",
-"Price Taker",
-"Price Discriminator",
-"None of the above"
+"1 ÷ CRR",
+"CRR ÷ 1",
+"CRR × Deposits",
+"Deposits ÷ CRR"
 ],
-correct: 2
+correct: 1
 },
 {
 id: 9,
-question: "The market structure in which there is only one seller is called:",
+question: "Which deficit shows total borrowing requirement of government?",
 options: [
-"Oligopoly",
-"Monopoly",
-"Monopolistic Competition",
-"Perfect Competition"
+"Revenue deficit",
+"Fiscal deficit",
+"Primary deficit",
+"Budget deficit"
 ],
 correct: 2
 },
 {
 id: 10,
-question: "Revenue Receipts of the government include:",
+question: "Paradox of thrift means:",
 options: [
-"Tax Revenue",
-"Sale of public sector shares",
-"Borrowings",
-"Recovery of loans"
-],
-correct: 1
-},
-{
-id: 11,
-question: "Fiscal Deficit is equal to:",
-options: [
-"Total Expenditure - Total Receipts",
-"Revenue Expenditure - Revenue Receipts",
-"Total Expenditure - Total Receipts excluding borrowings",
-"Interest Payments"
+"Saving increases income",
+"Saving increases investment",
+"Saving reduces income",
+"Saving has no effect"
 ],
 correct: 3
 },
 {
-id: 12,
-question: "The primary function of money is:",
+id: 11,
+question: "Depreciation of domestic currency means:",
 options: [
-"Medium of exchange",
-"Store of value",
-"Standard of deferred payments",
-"Transfer of value"
+"Rise in value",
+"Fall in value",
+"Fixed exchange",
+"Revaluation"
 ],
-correct: 1
+correct: 2
+},
+{
+id: 12,
+question: "Which account records export & import of services?",
+options: [
+"Capital account",
+"Current account",
+"Trade account",
+"Balance account"
+],
+correct: 2
 },
 {
 id: 13,
-question: "M1 measure of money supply includes:",
+question: "Open Market Operations involve:",
 options: [
-"Currency with public + Demand deposits",
-"Total deposits with Post Office",
-"Net Time deposits with banks",
-"None of the above"
+"Buying & selling govt bonds",
+"Printing currency",
+"Changing CRR",
+"Changing tax rates"
 ],
 correct: 1
 },
 {
 id: 14,
-question: "The Central Bank of India is:",
+question: "Real GDP is measured at:",
 options: [
-"State Bank of India",
-"Reserve Bank of India",
-"NABARD",
-"World Bank"
+"Current prices",
+"Constant prices",
+"Market prices only",
+"Factor cost only"
 ],
 correct: 2
 },
 {
 id: 15,
-question: "Which of the following is a qualitative tool of monetary policy?",
+question: "Casualisation of workforce leads to:",
 options: [
-"Bank Rate",
-"Open Market Operations",
-"Margin Requirements",
-"Cash Reserve Ratio"
+"Job security",
+"Income stability",
+"Increased vulnerability",
+"Higher wages"
 ],
 correct: 3
 },
 {
 id: 16,
-question: "The value of Marginal Propensity to Consume (MPC) lies between:",
+question: "Ex-post saving shows:",
 options: [
-"0 and 1",
-"1 and infinity",
-"0 and infinity",
-"None of the above"
+"Planned saving",
+"Desired saving",
+"Actual saving",
+"Forced saving"
 ],
-correct: 1
+correct: 3
 },
 {
 id: 17,
-question: "If MPS = 0.25, the value of Investment Multiplier (K) will be:",
+question: "Which year is known as “Year of Great Divide”?",
 options: [
-"2",
-"4",
-"5",
-"1"
+"1931",
+"1921",
+"1911",
+"1941"
 ],
 correct: 2
 },
 {
 id: 18,
-question: "Aggregate Demand (AD) in a two-sector economy is:",
+question: "Sustainable development means:",
 options: [
-"C + S",
-"C + I",
-"C + G",
-"C + I + G + (X-M)"
+"Exhausting resources",
+"Using non-renewables only",
+"Meeting present needs without harming future",
+"Rapid industrialisation"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 19,
-question: "In the situation of 'Excess Demand', the government should:",
+question: "If CRR = 20%, money multiplier is:",
 options: [
-"Decrease taxes",
-"Increase public expenditure",
-"Decrease public expenditure",
-"None of the above"
+"20",
+"10",
+"5",
+"2"
 ],
 correct: 3
 },
 {
 id: 20,
-question: "National Income is represented as:",
+question: "Indifference curve is:",
 options: [
-"GDP at MP",
-"NNP at FC",
-"NNP at MP",
-"GNP at FC"
+"Convex to origin",
+"Concave",
+"Straight line always",
+"Upward sloping"
 ],
-correct: 2
+correct: 1
 },
+
 {
 id: 21,
-question: "Real GDP is calculated at:",
+question: "MRS equals price ratio at:",
 options: [
-"Current year prices",
-"Base year prices",
-"Market prices",
-"None of the above"
+"Maximum utility",
+"Consumer equilibrium",
+"Budget intercept",
+"Minimum cost"
 ],
 correct: 2
 },
 {
 id: 22,
-question: "Which of the following is not a part of Factor Income?",
+question: "Which goods have straight line IC?",
 options: [
-"Wages",
-"Rent",
-"Old age pension",
-"Profit"
+"Complementary",
+"Inferior",
+"Substitute",
+"Giffen"
 ],
 correct: 3
 },
 {
 id: 23,
-question: "Balance of Trade includes only:",
+question: "Aggregate demand consists of:",
 options: [
-"Visible items",
-"Invisible items",
-"Capital transfers",
-"All of the above"
+"C + I",
+"C + I + G",
+"C + S",
+"I + G"
 ],
-correct: 1
+correct: 2
 },
 {
 id: 24,
-question: "Autonomous items in Balance of Payments (BOP) are also known as:",
+question: "Fiscal Responsibility and Budget Management Act enacted in:",
 options: [
-"Below the line items",
-"Above the line items",
-"Equilibrium items",
-"None of the above"
+"2001",
+"2002",
+"2003",
+"2004"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 25,
-question: "The exchange rate determined by market forces of demand and supply is:",
+question: "Capital receipts create:",
 options: [
-"Fixed Exchange Rate",
-"Flexible Exchange Rate",
-"Managed Floating Rate",
-"None of the above"
+"Income",
+"Assets only",
+"Liability or reduce assets",
+"Profit"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 26,
-question: "The Planning Commission in India was set up in the year:",
+question: "Gross Value Added =",
 options: [
-"1947",
-"1950",
-"1951",
-"1956"
+"Output − Intermediate consumption",
+"Output − Depreciation",
+"Output − Tax",
+"Output − Subsidy"
 ],
-correct: 2
+correct: 1
 },
 {
 id: 27,
-question: "Green Revolution was most successful in the production of:",
+question: "Which tax does NOT depend on income?",
 options: [
-"Wheat and Rice",
-"Pulses",
-"Cotton",
-"Jute"
+"Direct tax",
+"Proportional tax",
+"Lump-sum tax",
+"Progressive tax"
 ],
-correct: 1
+correct: 3
 },
 {
 id: 28,
-question: "LPG policy stands for:",
+question: "Marginal product falls due to:",
 options: [
-"Liberalization, Privatization, Globalization",
-"Licensing, Privatization, Globalization",
-"Liberalization, Public, Globalization",
-"None of the above"
+"Increasing returns",
+"Law of diminishing returns",
+"Constant returns",
+"Scale effect"
 ],
-correct: 1
+correct: 2
 },
+
 {
 id: 29,
-question: "The New Economic Policy was introduced in India in:",
+question: "GDP at market price =",
 options: [
-"1981",
-"1991",
-"2001",
-"1971"
+"GDPFC − NIT",
+"GDPFC + NIT",
+"GNPFC − NIT",
+"GNPMP − NIT"
 ],
 correct: 2
 },
 {
 id: 30,
-question: "Which of the following is a source of human capital formation?",
+question: "Balance of Payments always:",
 options: [
-"Expenditure on health",
-"Expenditure on education",
-"On-the-job training",
-"All of the above"
+"Shows surplus",
+"Shows deficit",
+"Balances in accounting sense",
+"Never balances"
 ],
-correct: 4
+correct: 3
 },
 {
 id: 31,
-question: "NABARD was established in:",
+question: "Trade deficit means:",
 options: [
-"1982",
-"1972",
-"1992",
-"1962"
+"Exports > Imports",
+"Imports > Exports",
+"Exports = Imports",
+"No trade"
 ],
-correct: 1
+correct: 2
 },
 {
 id: 32,
-question: "The main aim of Self Help Groups (SHGs) is:",
+question: "National Income =",
 options: [
-"To promote rural credit",
-"To promote industrialization",
-"To promote urban development",
-"None of the above"
+"NNPMP",
+"GNPMP",
+"NNPFC",
+"GDPFC"
 ],
-correct: 1
+correct: 3
 },
 {
 id: 33,
-question: "Sustainable development focuses on:",
+question: "Which is a flow variable?",
 options: [
-"Present generation only",
-"Future generation only",
-"Both present and future generations",
-"None of the above"
+"National wealth",
+"Capital stock",
+"National income",
+"Population"
 ],
 correct: 3
 },
 {
 id: 34,
-question: "Global warming is primarily caused by:",
+question: "Appreciation of currency makes exports:",
 options: [
-"Increase in Oxygen",
-"Increase in Greenhouse gases",
-"Increase in Nitrogen",
-"Afforestation"
+"Cheaper",
+"Costlier",
+"Unchanged",
+"Free"
 ],
 correct: 2
 },
 {
 id: 35,
-question: "Which country has the highest population density among India, China, and Pakistan?",
+question: "Ex-ante variables refer to:",
 options: [
-"India",
-"China",
-"Pakistan",
-"None of the above"
+"Actual values",
+"Planned values",
+"Past values",
+"Accounting values"
 ],
-correct: 1
+correct: 2
 },
 {
 id: 36,
-question: "Great Leap Forward (GLF) was a campaign initiated in:",
+question: "Budget deficit means:",
 options: [
-"India",
-"Pakistan",
-"China",
-"USA"
+"Revenue deficit",
+"Capital deficit",
+"Total receipts < Total expenditure",
+"Tax deficit"
 ],
 correct: 3
 },
 {
 id: 37,
-question: "The 'Yellow Revolution' is associated with:",
+question: "Which sector earns factor income?",
 options: [
-"Milk production",
-"Fish production",
-"Oilseeds production",
-"Grain production"
+"Government",
+"Firms",
+"Households",
+"Rest of world"
 ],
 correct: 3
 },
 {
 id: 38,
-question: "In microeconomics, we study:",
+question: "Market where agents freely exchange endowment:",
 options: [
-"National Income",
-"Aggregate Demand",
-"Individual Consumer behavior",
-"General Price Level"
+"Planned economy",
+"Market economy",
+"Mixed economy",
+"Socialist economy"
 ],
-correct: 3
+correct: 2
 },
 {
 id: 39,
-question: "When the price of a good falls, its quantity demanded rises. This is called:",
+question: "Value added avoids:",
 options: [
-"Expansion of demand",
-"Contraction of demand",
-"Increase in demand",
-"Decrease in demand"
+"Double counting",
+"Inflation",
+"Tax",
+"Subsidy"
 ],
 correct: 1
 },
 {
 id: 40,
-question: "A budget line shows combinations of two goods that cost:",
+question: "Net National Product =",
 options: [
-"Less than income",
-"More than income",
-"Exactly equal to income",
-"None of the above"
+"GNP − Depreciation",
+"GDP − Depreciation",
+"GDP + Depreciation",
+"GNP + Depreciation"
 ],
-correct: 3
+correct: 1
 },
 {
 id: 41,
-question: "Opportunity cost is defined as:",
+question: "Chipko movement related to:",
 options: [
-"Total cost of production",
-"Cost of the next best alternative foregone",
-"Variable cost",
-"Fixed cost"
+"Industrial growth",
+"Forest conservation",
+"Agriculture reform",
+"Population control"
 ],
 correct: 2
 },
 {
 id: 42,
-question: "In the long run, all factors of production are:",
+question: "Laterite soil formed due to:",
 options: [
-"Fixed",
-"Variable",
-"Constant",
-"None of the above"
+"Excess irrigation",
+"Chemical fertilizers",
+"Deforestation",
+"Crop rotation"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 43,
-question: "The difference between Total Revenue and Total Cost is:",
+question: "Which sector dominates Indian economy?",
 options: [
-"Gross Profit",
-"Net Profit",
-"Producer's Surplus",
-"Normal Profit"
+"Primary",
+"Secondary",
+"Tertiary",
+"Quaternary"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 44,
-question: "An oligopoly market with two sellers is called:",
+question: "Which is NOT leakage?",
 options: [
-"Duopoly",
-"Monopoly",
-"Perfect competition",
-"Monopsony"
+"Saving",
+"Tax",
+"Export",
+"Investment"
 ],
-correct: 1
+correct: 4
 },
 {
 id: 45,
-question: "Primary deficit is calculated by:",
+question: "Which curve is downward sloping?",
 options: [
-"Fiscal Deficit + Interest Payments",
-"Fiscal Deficit - Interest Payments",
-"Revenue Deficit - Interest Payments",
-"None of the above"
+"Supply",
+"Demand",
+"Cost",
+"Revenue"
 ],
 correct: 2
 },
+
 {
 id: 46,
-question: "Disinvestment is a part of:",
+question: "Price floor is:",
 options: [
-"Revenue Receipts",
-"Capital Receipts",
-"Revenue Expenditure",
-"Capital Expenditure"
+"Maximum price",
+"Minimum price",
+"Equilibrium price",
+"Subsidy price"
 ],
 correct: 2
 },
 {
 id: 47,
-question: "High Powered Money consists of:",
+question: "Which increases aggregate demand?",
 options: [
-"Currency with public + Cash reserves with banks",
-"Demand deposits + Time deposits",
-"M1 + M2",
-"M3 + M4"
+"Rise in taxes",
+"Fall in investment",
+"Increase in government spending",
+"Rise in imports"
 ],
-correct: 1
+correct: 3
 },
 {
 id: 48,
-question: "The slope of the Saving Curve is represented by:",
+question: "Consumer equilibrium occurs when:",
 options: [
-"MPC",
-"MPS",
-"APC",
-"APS"
+"MU = Price",
+"MUx = MUy",
+"MRS = Price ratio",
+"TU is maximum only"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 49,
-question: "The formula for Net Indirect Tax (NIT) is:",
+question: "Which is a capital receipt?",
 options: [
-"Indirect Tax + Subsidies",
-"Indirect Tax - Subsidies",
-"Factor Cost + Market Price",
-"None of the above"
+"GST",
+"Income tax",
+"Loan taken by government",
+"Interest received"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 50,
-question: "Who is known as the 'Father of Modern Economics'?",
+question: "Depreciation is also called:",
 options: [
-"Alfred Marshall",
-"J.M. Keynes",
-"Adam Smith",
-"David Ricardo"
+"Wear and tear",
+"Appreciation",
+"Investment",
+"Capital formation"
 ],
-correct: 3
+correct: 1
 }
 ];
