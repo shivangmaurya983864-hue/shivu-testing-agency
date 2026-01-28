@@ -1,560 +1,557 @@
 const questions = [
 {
 id: 1,
-question: "Which function of management ensures that activities are performed as per plans?",
+question: "Which function of management brings the management cycle back to planning?",
+options: [
+"Organising",
+"Directing",
+"Controlling",
+"Staffing"
+],
+correct: 3
+},
+{
+id: 2,
+question: "Which principle of management is violated when a manager shows favouritism?",
+options: [
+"Discipline",
+"Order",
+"Equity",
+"Unity of Command"
+],
+correct: 3
+},
+{
+id: 3,
+question: "“Let the buyer beware” refers to:",
+options: [
+"Right to be informed",
+"Caveat venditor",
+"Caveat emptor",
+"Consumer awareness"
+],
+correct: 3
+},
+{
+id: 4,
+question: "Which is NOT a feature of business environment?",
+options: [
+"Dynamic",
+"Certainty",
+"Complexity",
+"Inter-relatedness"
+],
+correct: 2
+},
+{
+id: 5,
+question: "Which concept focuses on customer satisfaction rather than sales?",
+options: [
+"Production concept",
+"Product concept",
+"Selling concept",
+"Marketing concept"
+],
+correct: 4
+},
+
+{
+id: 6,
+question: "The process of setting standards, comparing and correcting deviations is:",
+options: [
+"Planning",
+"Controlling",
+"Directing",
+"Organising"
+],
+correct: 2
+},
+{
+id: 7,
+question: "Which of the following is NOT an element of directing?",
+options: [
+"Supervision",
+"Motivation",
+"Leadership",
+"Coordination"
+],
+correct: 4
+},
+{
+id: 8,
+question: "The right to get grievances redressed is called:",
+options: [
+"Right to safety",
+"Right to be informed",
+"Right to seek redressal",
+"Right to consumer education"
+],
+correct: 3
+},
+{
+id: 9,
+question: "Which organisational structure is suitable for large diversified business?",
+options: [
+"Functional",
+"Informal",
+"Divisional",
+"Line"
+],
+correct: 3
+},
+{
+id: 10,
+question: "Which decision relates to allocation of funds?",
+options: [
+"Financing decision",
+"Dividend decision",
+"Investment decision",
+"Marketing decision"
+],
+correct: 3
+},
+{
+id: 11,
+question: "Which of the following is a semantic barrier?",
+options: [
+"Status difference",
+"Technical jargon",
+"Lack of attention",
+"Poor listening"
+],
+correct: 2
+},
+{
+id: 12,
+question: "Which plan is a combination of objectives, policies and procedures?",
+options: [
+"Budget",
+"Strategy",
+"Programme",
+"Rule"
+],
+correct: 3
+},
+{
+id: 13,
+question: "Which of the following ensures “one subordinate, one boss”?",
+options: [
+"Unity of direction",
+"Unity of command",
+"Scalar chain",
+"Order"
+],
+correct: 2
+},
+{
+id: 14,
+question: "Which is NOT a money market instrument?",
+options: [
+"Treasury Bill",
+"Commercial Paper",
+"Equity Share",
+"Certificate of Deposit"
+],
+correct: 3
+},
+{
+id: 15,
+question: "Branding helps in:",
+options: [
+"Increasing price",
+"Product identification",
+"Reducing cost",
+"Eliminating competition"
+],
+correct: 2
+},
+{
+id: 16,
+question: "Which function initiates action?",
 options: [
 "Planning",
 "Organising",
 "Directing",
 "Controlling"
 ],
-correct: 4
+correct: 3
 },
 {
-id: 2,
-question: "The process of grouping similar activities together is known as:",
+id: 17,
+question: "Which level of management is responsible for implementation?",
 options: [
-"Departmentalisation",
-"Delegation",
-"Decentralisation",
-"Coordination"
-],
-correct: 1
-},
-{
-id: 3,
-question: "Principles of management are not:",
-options: [
-"Universal",
-"Flexible",
-"Absolute",
-"Behavioural"
+"Top level",
+"Middle level",
+"Operational level",
+"Board of directors"
 ],
 correct: 3
 },
 {
-id: 4,
-question: "Who is known as the father of General Management?",
+id: 18,
+question: "Which is NOT an importance of consumer protection?",
 options: [
-"F.W. Taylor",
-"Henri Fayol",
-"Peter Drucker",
-"Max Weber"
+"Consumer ignorance",
+"Social responsibility",
+"Moral justification",
+"Organised consumers"
+],
+correct: 1
+},
+{
+id: 19,
+question: "Which technique studies unnecessary movements of workers?",
+options: [
+"Time study",
+"Method study",
+"Motion study",
+"Fatigue study"
+],
+correct: 3
+},
+{
+id: 20,
+question: "Which factor does NOT affect capital structure?",
+options: [
+"Cost",
+"Risk",
+"Control",
+"Marketing mix"
+],
+correct: 4
+},
+{
+id: 21,
+question: "Planning is a __________ function.",
+options: [
+"Backward looking",
+"Dynamic",
+"Static",
+"Random"
 ],
 correct: 2
 },
 {
-id: 5,
-question: "Which of the following is an example of a social environment?",
+id: 22,
+question: "Which right protects consumers from hazardous goods?",
 options: [
-"Money supply in the economy",
-"Consumer Protection Act",
-"Composition of family",
-"Constitution of the country"
+"Right to be heard",
+"Right to safety",
+"Right to choose",
+"Right to education"
 ],
-correct: 3
+correct: 2
 },
 {
-id: 6,
-question: "Planning is the ________ function of management.",
+id: 23,
+question: "Which is NOT a feature of management as a profession?",
 options: [
-"First",
-"Second",
-"Third",
-"Last"
+"Restricted entry",
+"Ethical code",
+"Well-defined body of knowledge",
+"Service motive"
 ],
 correct: 1
 },
 {
-id: 7,
-question: "Which of the following is a single-use plan?",
+id: 24,
+question: "Leadership focuses on:",
 options: [
-"Policy",
-"Procedure",
-"Budget",
-"Method"
+"Planning",
+"Influencing behaviour",
+"Staffing",
+"Controlling"
+],
+correct: 2
+},
+{
+id: 25,
+question: "Which environment includes interest rate and inflation?",
+options: [
+"Social",
+"Political",
+"Economic",
+"Technological"
 ],
 correct: 3
 },
 {
-id: 8,
-question: "Delegation of authority involves:",
+id: 26,
+question: "Which element of marketing mix generates revenue?",
 options: [
-"Responsibility",
+"Product",
+"Place",
+"Promotion",
+"Price"
+],
+correct: 4
+},
+{
+id: 27,
+question: "Which plan sets specific actions?",
+options: [
+"Policy",
+"Strategy",
+"Rule",
+"Procedure"
+],
+correct: 4
+},
+{
+id: 28,
+question: "Delegation does NOT include:",
+options: [
 "Authority",
+"Responsibility",
 "Accountability",
+"Motivation"
+],
+correct: 4
+},
+{
+id: 29,
+question: "Which concept focuses on societal welfare?",
+options: [
+"Selling concept",
+"Product concept",
+"Marketing concept",
+"Societal marketing concept"
+],
+correct: 4
+},
+{
+id: 30,
+question: "Which is NOT a feature of principles of management?",
+options: [
+"Flexible",
+"Universal",
+"Rigid",
+"General guidelines"
+],
+correct: 3
+},
+{
+id: 31,
+question: "Staffing is concerned with:",
+options: [
+"Recruitment",
+"Training",
+"Placement",
 "All of the above"
 ],
 correct: 4
 },
 {
-id: 9,
-question: "Which organization structure is suitable for a large organization with multiple products?",
+id: 32,
+question: "Which plan is expressed in numerical terms?",
 options: [
-"Functional",
-"Divisional",
-"Formal",
-"Informal"
+"Policy",
+"Budget",
+"Strategy",
+"Rule"
 ],
 correct: 2
 },
 {
-id: 10,
-question: "The first step in the staffing process is:",
+id: 33,
+question: "Which barrier arises due to emotions?",
 options: [
-"Recruitment",
-"Selection",
-"Estimating manpower requirements",
-"Training"
-],
-correct: 3
-},
-{
-id: 11,
-question: "Internal source of recruitment includes:",
-options: [
-"Campus recruitment",
-"Promotion",
-"Placement agencies",
-"Advertising"
-],
-correct: 2
-},
-{
-id: 12,
-question: "On-the-job training method includes:",
-options: [
-"Vestibule training",
-"Apprenticeship",
-"Case study",
-"Films"
-],
-correct: 2
-},
-{
-id: 13,
-question: "Motivation is a ________ process.",
-options: [
-"Physical",
+"Semantic",
 "Psychological",
-"Financial",
-"Technical"
+"Organisational",
+"Physical"
 ],
 correct: 2
 },
 {
-id: 14,
-question: "Which style of leadership involves no interference by the leader?",
+id: 34,
+question: "Which market deals in long-term securities?",
 options: [
-"Autocratic",
-"Democratic",
-"Laissez-faire",
-"Paternalistic"
+"Money market",
+"Capital market",
+"Commodity market",
+"Foreign exchange"
 ],
-correct: 3
+correct: 2
 },
 {
-id: 15,
-question: "The highest level of need in Maslow's hierarchy is:",
+id: 35,
+question: "Who protects investor interest in stock market?",
 options: [
-"Safety needs",
-"Belongingness needs",
-"Self-actualization needs",
-"Esteem needs"
+"RBI",
+"SEBI",
+"NABARD",
+"IRDAI"
 ],
-correct: 3
+correct: 2
+},
+{
+id: 36,
+question: "Which structure avoids duplication of resources?",
+options: [
+"Divisional",
+"Functional",
+"Informal",
+"Matrix"
+],
+correct: 2
+},
+{
+id: 37,
+question: "Which motivation theory talks about hierarchy?",
+options: [
+"Herzberg",
+"Maslow",
+"Taylor",
+"Fayol"
+],
+correct: 2
 },
 
 
 [Image of Maslow's hierarchy of needs]
 
 {
-id: 16,
-question: "Controlling is a ________ function.",
-options: [
-"Forward looking",
-"Backward looking",
-"Both 1 and 2",
-"None of the above"
-],
-correct: 3
-},
-{
-id: 17,
-question: "Financial management is concerned with:",
-options: [
-"Investment decisions",
-"Financing decisions",
-"Dividend decisions",
-"All of the above"
-],
-correct: 4
-},
-{
-id: 18,
-question: "Fixed capital requirements are higher in:",
-options: [
-"Trading concerns",
-"Manufacturing concerns",
-"Service sector",
-"None of the above"
-],
-correct: 2
-},
-{
-id: 19,
-question: "Working capital formula is:",
-options: [
-"Current Assets - Current Liabilities",
-"Total Assets - Total Liabilities",
-"Fixed Assets - Current Assets",
-"None of the above"
-],
-correct: 1
-},
-{
-id: 20,
-question: "Money market deals in:",
-options: [
-"Long term funds",
-"Short term funds",
-"Medium term funds",
-"None of the above"
-],
-correct: 2
-},
-{
-id: 21,
-question: "Which instrument is also known as a zero-coupon bond?",
-options: [
-"Commercial paper",
-"Treasury bill",
-"Call money",
-"Certificate of deposit"
-],
-correct: 2
-},
-{
-id: 22,
-question: "The primary market is also known as:",
-options: [
-"Stock exchange",
-"New issue market",
-"Secondary market",
-"Over the counter market"
-],
-correct: 2
-},
-{
-id: 23,
-question: "SEBI was established in:",
-options: [
-"1988",
-"1992",
-"1990",
-"1985"
-],
-correct: 2
-},
-{
-id: 24,
-question: "Marketing mix includes 4 Ps: Product, Price, Place and ________.",
-options: [
-"People",
-"Promotion",
-"Package",
-"Publicity"
-],
-correct: 2
-},
-
-
-[Image of the 4 Ps of marketing mix]
-
-{
-id: 25,
-question: "The tag line 'Taste of India' belongs to:",
-options: [
-"Mother Dairy",
-"Amul",
-"Nestle",
-"Britannia"
-],
-correct: 2
-},
-{
-id: 26,
-question: "Which of the following is not a consumer right?",
-options: [
-"Right to safety",
-"Right to be heard",
-"Right to seek redressal",
-"Right to get free samples"
-],
-correct: 4
-},
-{
-id: 27,
-question: "The maximum limit of compensation for District Commission is:",
-options: [
-"Up to ₹1 crore",
-"Up to ₹50 lakh",
-"Up to ₹2 crore",
-"Up to ₹10 lakh"
-],
-correct: 1
-},
-{
-id: 28,
-question: "Entrepreneurship is a process of:",
-options: [
-"Job seeking",
-"Risk taking and innovation",
-"Working under someone",
-"None of the above"
-],
-correct: 2
-},
-{
-id: 29,
-question: "The person who heads a company is usually called:",
-options: [
-"CFO",
-"CEO",
-"COO",
-"CMO"
-],
-correct: 2
-},
-{
-id: 30,
-question: "Which function ensures that the right people are at the right place?",
-options: [
-"Planning",
-"Organising",
-"Staffing",
-"Directing"
-],
-correct: 3
-},
-{
-id: 31,
-question: "Fayol's principle 'Unity of Command' states that:",
-options: [
-"One head one plan",
-"One subordinate one superior",
-"Equal pay for equal work",
-"Team spirit"
-],
-correct: 2
-},
-{
-id: 32,
-question: "Demonetization took place in India in:",
-options: [
-"2014",
-"2015",
-"2016",
-"2017"
-],
-correct: 3
-},
-{
-id: 33,
-question: "Planning is an ________ activity.",
-options: [
-"Physical",
-"Intellectual",
-"Manual",
-"Social"
-],
-correct: 2
-},
-{
-id: 34,
-question: "Span of management refers to:",
-options: [
-"Number of managers",
-"Number of subordinates a superior can manage",
-"Working hours",
-"None of the above"
-],
-correct: 2
-},
-{
-id: 35,
-question: "The most expensive source of recruitment is:",
+id: 38,
+question: "Which is NOT a source of internal recruitment?",
 options: [
 "Promotion",
 "Transfer",
+"Direct recruitment",
+"Job rotation"
+],
+correct: 3
+},
+{
+id: 39,
+question: "Which element creates product identity?",
+options: [
+"Packaging",
+"Branding",
 "Advertising",
-"Direct recruitment"
-],
-correct: 3
-},
-{
-id: 36,
-question: "Which of the following is a barrier to communication?",
-options: [
-"Semantic barrier",
-"Psychological barrier",
-"Personal barrier",
-"All of the above"
-],
-correct: 4
-},
-{
-id: 37,
-question: "The last step in the controlling process is:",
-options: [
-"Setting standards",
-"Measurement of performance",
-"Taking corrective action",
-"Comparison"
-],
-correct: 3
-},
-{
-id: 38,
-question: "Dividend decision is about:",
-options: [
-"Purchase of assets",
-"Distribution of profits",
-"Raising of funds",
-"None of the above"
+"Pricing"
 ],
 correct: 2
 },
 {
-id: 39,
-question: "Which market has no physical location?",
+id: 40,
+question: "Controlling helps in:",
 options: [
-"Primary market",
-"Secondary market",
-"Over the counter market",
-"None of the above"
+"Motivation",
+"Coordination",
+"Achievement of objectives",
+"Recruitment"
 ],
 correct: 3
 },
 {
-id: 40,
-question: "Labeling helps in:",
-options: [
-"Product identification",
-"Grading",
-"Promotion",
-"All of the above"
-],
-correct: 4
-},
-{
 id: 41,
-question: "A brand that is registered is called:",
+question: "Which function ensures optimum utilisation of resources?",
 options: [
-"Brand mark",
-"Trademark",
-"Copy",
-"Logo"
+"Planning",
+"Organising",
+"Directing",
+"Controlling"
 ],
 correct: 2
 },
 {
 id: 42,
-question: "Consumer Protection Act 2019 replaced the act of:",
+question: "Which is NOT a responsibility of business towards consumers?",
 options: [
-"1980",
-"1986",
-"1990",
-"1996"
+"Fair prices",
+"Quality goods",
+"Profit maximisation only",
+"Honest advertising"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 43,
-question: "A network of social relationships at work is:",
+question: "Which leadership style gives full freedom?",
 options: [
-"Formal organization",
-"Informal organization",
-"Functional structure",
-"None of the above"
+"Autocratic",
+"Democratic",
+"Laissez-faire",
+"Bureaucratic"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 44,
-question: "Training increases ________ of employees.",
+question: "Which environment includes laws and regulations?",
 options: [
-"Knowledge",
-"Skills",
-"Efficiency",
-"All of the above"
+"Social",
+"Political",
+"Legal",
+"Economic"
 ],
-correct: 4
+correct: 3
 },
 {
 id: 45,
-question: "Directing flows in which direction?",
+question: "Which market provides liquidity to securities?",
 options: [
-"Upward",
-"Downward",
-"Horizontal",
-"Diagonal"
+"Primary market",
+"Secondary market",
+"Money market",
+"Capital market"
 ],
 correct: 2
 },
 {
 id: 46,
-question: "Debt-Equity ratio is a measure of:",
+question: "Which plan is a standing plan?",
 options: [
-"Liquidity",
-"Solvency",
-"Profitability",
-"Activity"
+"Budget",
+"Programme",
+"Policy",
+"Project"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 47,
-question: "Commercial paper usually has a maturity period of:",
+question: "Which is NOT a feature of good brand name?",
 options: [
-"1 to 2 years",
-"15 days to 1 year",
-"More than 5 years",
-"None of the above"
+"Short",
+"Easy to pronounce",
+"Technical jargon",
+"Distinctive"
 ],
-correct: 2
+correct: 3
 },
 {
 id: 48,
-question: "Retained earnings is a/an ________ source of finance.",
+question: "Which decision decides profit distribution?",
 options: [
-"Internal",
-"External",
-"Short term",
-"None of the above"
+"Investment",
+"Financing",
+"Dividend",
+"Marketing"
+],
+correct: 3
+},
+{
+id: 49,
+question: "Which function is forward looking?",
+options: [
+"Planning",
+"Controlling",
+"Staffing",
+"Directing"
 ],
 correct: 1
 },
 {
-id: 49,
-question: "The core purpose of financial planning is to ensure:",
+id: 50,
+question: "Which is the first step of planning?",
 options: [
-"High profits",
-"Availability of funds when needed",
-"Minimum taxes",
-"None of the above"
+"Developing premises",
+"Setting objectives",
+"Selecting alternative",
+"Implementation"
 ],
 correct: 2
-},
-{
-id: 50,
-question: "Financial planning helps in:",
-options: [
-"Resource allocation",
-"Forecasting",
-"Avoiding business shocks",
-"All of the above"
-],
-correct: 4
 }
 ];
