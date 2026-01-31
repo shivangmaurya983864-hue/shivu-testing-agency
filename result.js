@@ -1,76 +1,72 @@
 const examResult = JSON.parse(localStorage.getItem("examResult"));
 
 if (!examResult) {
-    alert("Result data nahi mila!");
-    window.location.href = "index.html";
+  alert("Result not found");
+  location.href = "index.html";
 }
 
 const { questions, answers } = examResult;
 
-let stats = {
-    total: questions.length,
-    correct: 0,
-    wrong: 0,
-    unattempted: 0,
-    score: 0
-};
+let correct = 0, wrong = 0, skipped = 0;
+const tbody = document.getElementById("resultBody");
 
-// --- LOGIC: DATA SE MATCH KARNA ---
 questions.forEach((q, i) => {
-    const userSelection = answers[i]; // 0, 1, 2, or 3
-    const correctIndex = Number(q.correct) - 1; // 1-based data ko 0-based index banaya
+  const user = answers[i];
+  const correctIdx = q.correct - 1;
 
-    if (userSelection === null || userSelection === undefined) {
-        stats.unattempted++;
-    } else if (userSelection === correctIndex) {
-        stats.correct++;
-        stats.score += 5; // Sahi ke +5 (CUET Style)
-    } else {
-        stats.wrong++;
-        stats.score -= 1; // Galat ka -1
-    }
+  let status = "Skipped";
+  if (user === null) {
+    skipped++;
+  } else if (user === correctIdx) {
+    correct++;
+    status = "Correct";
+  } else {
+    wrong++;
+    status = "Wrong";
+  }
+
+  tbody.innerHTML += `
+    <tr>
+      <td>${i + 1}</td>
+      <td>${user === null ? "---" : String.fromCharCode(65 + user)}</td>
+      <td>${status}</td>
+      <td>${String.fromCharCode(65 + correctIdx)}</td>
+    </tr>
+  `;
 });
 
-// UI Update
-document.getElementById("totalQ").innerText = stats.total;
-document.getElementById("correct").innerText = stats.correct;
-document.getElementById("wrong").innerText = stats.wrong;
-document.getElementById("unattempted").innerText = stats.unattempted;
-document.getElementById("score").innerText = stats.score;
+const total = questions.length;
 
-// --- TABLE RENDERING ---
-function render() {
-    const tbody = document.getElementById("tbody");
-    tbody.innerHTML = "";
+document.getElementById("totalQ").innerText = total;
+document.getElementById("correct").innerText = correct;
+document.getElementById("wrong").innerText = wrong;
+document.getElementById("skipped").innerText = skipped;
 
-    questions.forEach((q, i) => {
-        const userSelection = answers[i];
-        const correctIdx = Number(q.correct) - 1;
-        
-        const userText = userSelection === null ? "---" : String.fromCharCode(65 + userSelection);
-        const correctText = String.fromCharCode(65 + correctIdx);
-        
-        let statusClass = "unattempted-row";
-        let statusText = "Skipped";
+document.getElementById("mTotal").innerText = total;
+document.getElementById("mCorrect").innerText = correct;
+document.getElementById("mWrong").innerText = wrong;
+document.getElementById("mSkipped").innerText = skipped;
 
-        if (userSelection !== null) {
-            if (userSelection === correctIdx) {
-                statusClass = "correct-row";
-                statusText = "CORRECT";
-            } else {
-                statusClass = "wrong-row";
-                statusText = "WRONG";
-            }
-        }
+const percent = Math.round((correct / total) * 100);
+document.getElementById("scorePercent").innerText = percent + "%";
+document.getElementById("scoreBar").style.width = percent + "%";
+document.getElementById("donutText").innerText = percent + "%";
 
-        tbody.innerHTML += `
-            <tr class="${statusClass}">
-                <td>${i + 1}</td>
-                <td>${userText}</td>
-                <td><b>${statusText}</b></td>
-                <td>${correctText}</td>
-            </tr>`;
-    });
+const pCorrect = Math.round((correct / total) * 100);
+const pWrong = Math.round((wrong / total) * 100);
+const pSkipped = 100 - pCorrect - pWrong;
+
+document.getElementById("pCorrect").innerText = pCorrect + "%";
+document.getElementById("pWrong").innerText = pWrong + "%";
+document.getElementById("pSkipped").innerText = pSkipped + "%";
+
+document.querySelector(".donut").style.background =
+  `conic-gradient(
+    #38a169 0% ${pCorrect}%,
+    #e53e3e ${pCorrect}% ${pCorrect + pWrong}%,
+    #ed8936 ${pCorrect + pWrong}% 100%
+  )`;
+
+function viewAnswers() {
+  window.location.href = "analysis.html";
 }
-
-window.onload = render;
