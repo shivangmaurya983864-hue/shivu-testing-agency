@@ -1,27 +1,44 @@
 window.onload = function () {
-  document.getElementById("totalQ").innerText =
-    localStorage.getItem("summary_total") || 0;
+  const examResult = JSON.parse(localStorage.getItem("examResult"));
 
-  document.getElementById("answered").innerText =
-    localStorage.getItem("summary_answered") || 0;
+  if (!examResult) {
+    alert("Exam data not found!");
+    window.location.href = "exam.html";
+    return;
+  }
 
-  document.getElementById("notAnswered").innerText =
-    localStorage.getItem("summary_notAnswered") || 0;
+  const { questions, answers, status } = examResult;
 
-  document.getElementById("marked").innerText =
-    localStorage.getItem("summary_marked") || 0;
+  let total = questions.length;
+  let answered = 0;
+  let notAnswered = 0;
+  let marked = 0;
+  let answeredMarked = 0;
+  let notVisited = 0;
 
-  document.getElementById("answeredMarked").innerText =
-    localStorage.getItem("summary_answeredMarked") || 0;
+  status.forEach((s, i) => {
+    if (s === "notVisited") notVisited++;
+    else if (s === "notAnswered") notAnswered++;
+    else if (s === "answered") answered++;
+    else if (s === "marked" && answers[i] === null) marked++;
+    else if (s === "marked" && answers[i] !== null) answeredMarked++;
+    else if (s === "answeredMarked") answeredMarked++;
+  });
 
-  document.getElementById("notVisited").innerText =
-    localStorage.getItem("summary_notVisited") || 0;
+  document.getElementById("totalQ").innerText = total;
+  document.getElementById("answered").innerText = answered;
+  document.getElementById("notAnswered").innerText = notAnswered;
+  document.getElementById("marked").innerText = marked;
+  document.getElementById("answeredMarked").innerText = answeredMarked;
+  document.getElementById("notVisited").innerText = notVisited;
 };
 
+// FINAL SUBMIT → RESULT PAGE
 function finalSubmit() {
   window.location.href = "result.html";
 }
 
+// BACK TO EXAM
 function goBack() {
   window.location.href = "exam.html";
 }
