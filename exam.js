@@ -6,19 +6,23 @@ let timeLeft = 60 * 60; // 1 hour
 // INIT
 for (let i = 0; i < questions.length; i++) {
   answers[i] = null;
-  status[i] = "notVisited"; 
+  status[i] = "notVisited";
 }
 
 // TIMER
-setInterval(() => {
+const timerInterval = setInterval(() => {
   if (timeLeft <= 0) {
+    clearInterval(timerInterval);
     submitExam();
     return;
   }
+
   timeLeft--;
+
   const h = String(Math.floor(timeLeft / 3600)).padStart(2, "0");
   const m = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, "0");
   const s = String(timeLeft % 60).padStart(2, "0");
+
   document.getElementById("timer").innerText = `${h}:${m}:${s}`;
 }, 1000);
 
@@ -65,7 +69,7 @@ function saveAnswer() {
   }
 }
 
-// BUTTONS
+// BUTTON ACTIONS
 function saveAndNext() {
   saveAnswer();
   next();
@@ -106,7 +110,7 @@ function prevQuestion() {
   }
 }
 
-// PALETTE
+// QUESTION PALETTE
 function buildPalette() {
   const grid = document.getElementById("paletteGrid");
   grid.innerHTML = "";
@@ -126,9 +130,9 @@ function jump(i) {
   loadQuestion();
 }
 
-// LEGEND COUNT (PHOTO JAISE)
+// LEGEND COUNT (logic ready, UI CSS handle karega)
 function updateLegend() {
-  let counts = {
+  const counts = {
     notVisited: 0,
     notAnswered: 0,
     answered: 0,
@@ -137,12 +141,10 @@ function updateLegend() {
   };
 
   status.forEach(s => counts[s]++);
-
-  document.querySelector(".notVisited + span")?.innerText;
-  // (legend numbers already image based, visual handled by CSS)
+  // Numbers optional – visual CSS based
 }
 
-// SUBMIT
+// SUBMIT EXAM
 function submitExam() {
   const examResult = {
     questions: questions,
@@ -154,5 +156,5 @@ function submitExam() {
   window.location.href = "summary.html";
 }
 
-// START
+// START EXAM
 loadQuestion();
