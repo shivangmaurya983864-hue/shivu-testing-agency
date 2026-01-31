@@ -1,85 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shivu Testing Agency - Exam</title>
-  <link rel="stylesheet" href="exam.css">
+<meta charset="UTF-8">
+<title>Shivu Testing Agency | CBT Exam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="exam.css">
 </head>
+
 <body>
 
 <!-- HEADER -->
 <div class="header">
-  <div class="logo">
+  <div class="header-left">
     <h2>Shivu Testing Agency</h2>
     <span>Excellence & Assessment</span>
   </div>
 
-  <div class="candidate">
-    <div>Candidate Name : <b>Vandana Gupta</b></div>
-    <div>Exam Name : <b>CUET UG</b></div>
-    <div>Subject Name : <b id="subjectName">---</b></div>
-    <div>Remaining Time :
-      <span id="timer">01:00:00</span>
-    </div>
+  <div class="header-center">
+    Candidate : <b id="candName"></b> |
+    Exam : <b>CUET UG</b> |
+    Subject : <b id="subjectName"></b>
   </div>
 
-  <div class="lang">
-    <select>
-      <option>English</option>
-    </select>
-  </div>
+  <div class="timer" id="timer">01:00:00</div>
 </div>
 
 <!-- MAIN -->
 <div class="main">
 
-  <!-- QUESTION AREA -->
-  <div class="question-box">
-    <h3 id="qno">Question 1:</h3>
-    <p id="questionText"></p>
+  <!-- QUESTION -->
+  <div class="card">
+    <div class="qno" id="qno">Question 1</div>
+    <div class="question" id="questionText"></div>
 
     <div id="options"></div>
 
-    <div class="buttons">
-      <button onclick="prevQuestion()"><< BACK</button>
-      <button class="green" onclick="saveAndNext()">SAVE & NEXT</button>
-      <button onclick="clearResponse()">CLEAR</button>
-      <button class="orange" onclick="markForReview()">SAVE & MARK FOR REVIEW</button>
-      <button class="blue" onclick="markForReviewNext()">MARK FOR REVIEW & NEXT</button>
-      <button class="green" onclick="submitExam()">SUBMIT</button>
+    <div class="actions">
+      <button class="btn save" onclick="saveAndNext()">SAVE & NEXT</button>
+      <button class="btn review" onclick="markForReview()">SAVE & MARK FOR REVIEW</button>
+      <button class="btn next" onclick="markForReviewNext()">MARK FOR REVIEW & NEXT</button>
+      <button class="btn clear" onclick="clearResponse()">CLEAR</button>
+      <button class="btn submit" onclick="submitExam()">SUBMIT</button>
     </div>
   </div>
 
   <!-- PALETTE -->
-  <div class="palette">
+  <div class="card">
+    <div class="palette-title">Question Palette</div>
     <div class="legend">
-      <div><span class="box notVisited"></span> Not Visited</div>
-      <div><span class="box notAnswered"></span> Not Answered</div>
-      <div><span class="box answered"></span> Answered</div>
-      <div><span class="box marked"></span> Marked for Review</div>
-      <div><span class="box answeredMarked"></span> Answered & Marked</div>
+      🔴 Not Visited | 🟠 Not Answered | 🟢 Answered | 🟣 Marked | 🟣🟢 Answered & Marked
     </div>
-
-    <div class="grid" id="paletteGrid"></div>
+    <div class="palette" id="paletteGrid"></div>
   </div>
 
 </div>
 
-<!-- 🔥 SUBJECT DATA LOAD -->
 <script>
+  document.getElementById("candName").innerText =
+    localStorage.getItem("candidateName") || "Candidate";
+
   const subject = localStorage.getItem("selectedSubject");
 
-  if (subject === "accountancy") {
-    document.write('<script src="data/accountancy.js"><\/script>');
-    document.getElementById("subjectName").innerText = "ACCOUNTANCY";
-  } else if (subject === "economics") {
+  if(subject==="economics"){
+    document.getElementById("subjectName").innerText="ECONOMICS";
     document.write('<script src="data/economics.js"><\/script>');
-    document.getElementById("subjectName").innerText = "ECONOMICS";
-  } else if (subject === "business") {
+  }else if(subject==="accountancy"){
+    document.getElementById("subjectName").innerText="ACCOUNTANCY";
+    document.write('<script src="data/accountancy.js"><\/script>');
+  }else{
+    document.getElementById("subjectName").innerText="BUSINESS STUDIES";
     document.write('<script src="data/business.js"><\/script>');
-    document.getElementById("subjectName").innerText = "BUSINESS STUDIES";
-  } else {
-    alert("Subject not selected!");
   }
 </script>
 
