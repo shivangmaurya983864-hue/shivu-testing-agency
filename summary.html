@@ -20,15 +20,33 @@
   <h2>Exam Summary</h2>
 
   <div class="summary-grid">
-    <div><div class="title">No of Questions</div><div class="count" id="totalQ">0</div></div>
-    <div><div class="title">Answered</div><div class="count answered" id="answered">0</div></div>
-    <div><div class="title">Not Answered</div><div class="count notAnswered" id="notAnswered">0</div></div>
-    <div><div class="title">Marked for Review</div><div class="count marked" id="marked">0</div></div>
     <div>
-      <div class="title">Answered & Marked for Review<br>(will be considered for evaluation)</div>
+      <div class="title">No of Questions</div>
+      <div class="count" id="totalQ">0</div>
+    </div>
+    <div>
+      <div class="title">Answered</div>
+      <div class="count answered" id="answered">0</div>
+    </div>
+    <div>
+      <div class="title">Not Answered</div>
+      <div class="count notAnswered" id="notAnswered">0</div>
+    </div>
+    <div>
+      <div class="title">Marked for Review</div>
+      <div class="count marked" id="marked">0</div>
+    </div>
+    <div>
+      <div class="title">
+        Answered & Marked for Review<br>
+        (will be considered for evaluation)
+      </div>
       <div class="count answeredMarked" id="answeredMarked">0</div>
     </div>
-    <div><div class="title">Not Visited</div><div class="count notVisited" id="notVisited">0</div></div>
+    <div>
+      <div class="title">Not Visited</div>
+      <div class="count notVisited" id="notVisited">0</div>
+    </div>
   </div>
 
   <hr>
@@ -44,44 +62,9 @@
   </div>
 </div>
 
-<footer>© All Rights Reserved - National Testing Agency</footer>
+<footer>© All Rights Reserved - Shivu Testing Agency</footer>
 
-<script>
-const examResult = JSON.parse(localStorage.getItem("examResult"));
-
-if (!examResult) {
-  alert("Exam data not found");
-  location.href = "exam.html";
-}
-
-const { questions, answers, status } = examResult;
-
-let total = questions.length;
-let answered = 0;
-let notAnswered = 0;
-let marked = 0;
-let answeredMarked = 0;
-let notVisited = 0;
-
-status.forEach((s, i) => {
-  if (s === "notVisited") notVisited++;
-  else if (s === "notAnswered") notAnswered++;
-  else if (s === "answered") answered++;
-  else if (s === "marked" && answers[i] === null) marked++;
-  else if (s === "marked" && answers[i] !== null) answeredMarked++;
-});
-
-document.getElementById("totalQ").innerText = total;
-document.getElementById("answered").innerText = answered;
-document.getElementById("notAnswered").innerText = notAnswered;
-document.getElementById("marked").innerText = marked;
-document.getElementById("answeredMarked").innerText = answeredMarked;
-document.getElementById("notVisited").innerText = notVisited;
-
-function finalSubmit() {
-  window.location.href = "result.html";
-}
-function goBack() {
-  window.location.href = "exam.html";
-}
-</script>
+<!-- ONLY ONE JS FILE -->
+<script src="summary.js"></script>
+</body>
+</html>
