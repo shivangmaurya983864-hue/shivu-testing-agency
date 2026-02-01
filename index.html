@@ -1,225 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>General Instructions | Shivu Testing Agency</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Shivu Testing Agency | Mock Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root{
-  --bg:#0b1020;
-  --card:#151a2e;
-  --border:rgba(255,255,255,0.12);
-  --text:#e8ecf4;
-  --muted:#b7bfd6;
-  --green:#2ecc71;
-  --orange:#f39c12;
-  --purple:#9b59b6;
-  --gray:#9aa3b2;
-}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-*{box-sizing:border-box;font-family:Segoe UI,system-ui,sans-serif}
+    <style>
+        :root {
+            --primary: #0d47a1;
+            --secondary: #1976d2;
+            --accent: #64b5f6;
+            --white: #ffffff;
+        }
 
-body{
-  margin:0;
-  background:radial-gradient(80% 80% at 50% 0%,#141a3a,#070a14);
-  color:var(--text);
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-/* HEADER */
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 24px;
-  border-bottom:1px solid var(--border);
-}
-.brand h1{margin:0;font-size:20px}
-.brand small{color:var(--muted);font-size:12px}
-.lang{
-  background:#1a2040;
-  border:1px solid var(--border);
-  color:#fff;
-  padding:6px 10px;
-  border-radius:10px;
-}
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            display: flex;
+            flex-direction: column;
+        }
 
-/* MAIN */
-.wrap{
-  max-width:1050px;
-  margin:22px auto;
-  padding:0 16px;
-}
-.card{
-  background:linear-gradient(180deg,#171d38,#0e1328);
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:24px 28px; /* ⬅ reduced */
-}
+        /* HEADER */
+        header {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(12px);
+            padding: 14px 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+            font-weight: 600;
+        }
 
-/* TITLES */
-.title{
-  text-align:center;
-  font-size:24px;   /* ⬅ smaller */
-  letter-spacing:1px;
-}
-.subtitle{
-  text-align:center;
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:18px;
-}
+        header span {
+            color: #c8e6c9;
+            font-weight: 400;
+        }
 
-/* SECTIONS */
-.section{margin-bottom:18px}
-.section h3{
-  margin-bottom:8px;
-  font-size:16px;
-}
-ol{
-  padding-left:20px;
-  margin:0;
-}
-li{
-  margin-bottom:6px;
-  font-size:14px;
-  color:var(--muted);
-}
+        /* MAIN LAYOUT */
+        .container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            padding: 60px;
+            gap: 40px;
+            align-items: center;
+        }
 
-/* STATUS */
-.status-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px 40px;
-  margin-top:10px;
-}
-.status{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:14px;
-}
-.box{
-  width:14px;height:14px;border-radius:3px;
-}
-.nv{background:var(--gray)}
-.na{background:var(--orange)}
-.ans{background:var(--green)}
-.mark{background:var(--purple)}
-.am{background:#c77dff}
+        /* LEFT SECTION (ANIMATION FIXED) */
+        .welcome {
+            color: #fff;
+            opacity: 0;
+            transform: translateX(-60px);
+            animation: fadeInLeft 1.2s ease forwards;
+        }
 
-/* TWO COLUMN */
-.two{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:26px;
-}
-.warn{
-  color:#ff6b6b;
-  font-size:13px;
-  margin-top:8px;
-}
+        .welcome h1 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
 
-/* FOOTER */
-.footer{
-  border-top:1px solid var(--border);
-  padding-top:12px;
-}
-.check{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  font-size:14px;
-}
-.check input{width:16px;height:16px}
+        .welcome h1 span {
+            color: #ffca28;
+        }
 
-.btn{
-  margin:14px auto 0;
-  display:block;
-  width:220px;      /* ⬅ smaller */
-  padding:10px;
-  border-radius:12px;
-  font-size:16px;
-  border:none;
-  background:#1f8f4d;
-  color:#fff;
-  cursor:pointer;
-}
-.btn:disabled{opacity:.4;cursor:not-allowed}
-</style>
+        .welcome p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 520px;
+        }
+
+        .line {
+            width: 120px;
+            height: 4px;
+            background: #ffca28;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        /* RIGHT CARD (ANIMATION FIXED) */
+        .card {
+            background: rgba(255,255,255,0.18);
+            backdrop-filter: blur(18px);
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+            opacity: 0;
+            transform: translateX(60px);
+            animation: fadeInRight 1.2s ease forwards;
+        }
+
+        .card h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        label {
+            color: #e3f2fd;
+            font-size: 14px;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: none;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* OLD STYLE BUTTON (WORKING) */
+        .start-btn {
+            width: 100%;
+            padding: 12px;
+            background: #0b4ea2;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .start-btn:hover {
+            background: #083b7a;
+        }
+
+        .small-text {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #e1f5fe;
+            text-align: center;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #e3f2fd;
+            font-size: 14px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+
+            .welcome h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="header">
-  <div class="brand">
-    <h1>Shivu Testing Agency</h1>
-    <small>Excellence & Assessment</small>
-  </div>
-  <select class="lang">
-    <option>English</option>
-    <option>Hindi</option>
-  </select>
-</div>
+<header>
+    🟢 <strong>Shivu Testing Agency</strong>
+    <span>Excellence in Assessment</span>
+</header>
 
-<div class="wrap">
-  <div class="card">
+<main class="container">
 
-    <div class="title">GENERAL INSTRUCTIONS</div>
-    <div class="subtitle">Please read the instructions carefully</div>
+    <!-- LEFT -->
+    <section class="welcome">
+        <h1>Welcome 🤗 <span>Vandana Gupta!</span></h1>
+        <p>
+            Believe in yourself and your abilities.  
+            Every mock test you attempt is one step closer to real exam success.
+        </p>
 
-    <div class="section">
-      <h3>General Instructions:</h3>
-      <ol>
-        <li>Total duration of CUET UG Examination is <b>60 minutes</b>.</li>
-        <li>The countdown timer will be displayed on the screen.</li>
-        <li>The Question Palette shows the status of each question:</li>
-      </ol>
+        <div class="line"></div>
 
-      <div class="status-grid">
-        <div class="status"><div class="box nv"></div>Not Visited</div>
-        <div class="status"><div class="box na"></div>Not Answered</div>
-        <div class="status"><div class="box ans"></div>Answered</div>
-        <div class="status"><div class="box mark"></div>Marked for Review</div>
-        <div class="status"><div class="box am"></div>Answered & Marked for Review</div>
-      </div>
-    </div>
+        <p>
+            Welcome to <strong>Shivu Testing Agency</strong>,  
+            your trusted Test Practice Centre.
+        </p>
+    </section>
 
-    <div class="section two">
-      <div>
-        <h3>Navigating to a Question:</h3>
-        <ol>
-          <li>Click on the question number in the Question Palette.</li>
-          <li>Click on <b>Save & Next</b> to save your answer.</li>
-          <li>Click on <b>Mark for Review & Next</b> if you want to review later.</li>
-        </ol>
-      </div>
+    <!-- RIGHT -->
+    <section class="card">
+        <h3>Select exam you would like to appear</h3>
 
-      <div>
-        <h3>Answering a Question:</h3>
-        <ol>
-          <li>Select one option by clicking the radio button.</li>
-          <li>To change answer, click another option.</li>
-          <li>Click <b>Clear Response</b> to remove your answer.</li>
-        </ol>
-      </div>
-    </div>
+        <label>Exam</label>
+        <select disabled>
+            <option>CUET (UG)</option>
+        </select>
 
-    <div class="warn">⚠ All questions will appear in your default language.</div>
+        <label>Paper</label>
+        <select id="subject">
+            <option value="">-- Select --</option>
+            <option value="accountancy">Accountancy</option>
+            <option value="business">Business Studies</option>
+            <option value="economics">Economics</option>
+        </select>
 
-    <div class="footer">
-      <div class="check">
-        <input type="checkbox" id="agree" onchange="btn.disabled=!this.checked">
-        <label for="agree">I have read and understood all the instructions.</label>
-      </div>
+        <button class="start-btn" onclick="startTest()">START MOCK TEST</button>
 
-      <button class="btn" id="btn" disabled onclick="location.href='exam.html'">
-        PROCEED
-      </button>
-    </div>
+        <div class="small-text">
+            For STA Mock Tests of December 2026 onwards, please click here
+        </div>
+    </section>
 
-  </div>
-</div>
+</main>
+
+<footer>
+    © All Rights Reserved – Shivu Testing Agency
+</footer>
+
+<script>
+function startTest() {
+    const subject = document.getElementById("subject").value;
+
+    if (subject === "") {
+        alert("Please select a subject");
+        return;
+    }
+
+    localStorage.setItem("selectedSubject", subject);
+    window.location.href = "instructions.html";
+}
+</script>
 
 </body>
 </html>
