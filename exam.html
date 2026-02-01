@@ -56,19 +56,20 @@
 </div>
 
 <script>
-  document.getElementById("candName").innerText =
-    localStorage.getItem("candidateName") || "Candidate";
+  // 🔹 Candidate Name (Hardcoded)
+  document.getElementById("candName").innerText = "Shivang Maurya";
 
+  // 🔹 Subject Handling
   const subject = localStorage.getItem("selectedSubject");
 
-  if(subject==="economics"){
-    document.getElementById("subjectName").innerText="ECONOMICS";
+  if(subject === "economics"){
+    document.getElementById("subjectName").innerText = "ECONOMICS";
     document.write('<script src="data/economics.js"><\/script>');
-  }else if(subject==="accountancy"){
-    document.getElementById("subjectName").innerText="ACCOUNTANCY";
+  } else if(subject === "accountancy"){
+    document.getElementById("subjectName").innerText = "ACCOUNTANCY";
     document.write('<script src="data/accountancy.js"><\/script>');
-  }else{
-    document.getElementById("subjectName").innerText="BUSINESS STUDIES";
+  } else {
+    document.getElementById("subjectName").innerText = "BUSINESS STUDIES";
     document.write('<script src="data/business.js"><\/script>');
   }
 </script>
