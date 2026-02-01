@@ -1,592 +1,553 @@
 const questions = [
-
   // ✅ QUESTION 1
   {
-    question: "_____ is the managerial function that monitors organisational performance towards attainment of goals.",
-    options: ["Planning", "Directing", "Controlling", "Organising"],
+    question: "_______ is the managerial function that monitors organisational performance towards attainment of goals.",
+    options: ["Planning", "Directing", "Staffing", "Controlling"],
     correct: 3,
     topic: "Functions of Management – Controlling",
     explanation:
-      "Controlling ka main kaam hota hai actual performance ko pehle se set kiye gaye standards ke saath compare karna. Agar performance kam ya zyada ho, to corrective action liya jaata hai."
+      "Controlling actual performance ko standards se compare karta hai.\n\n" +
+      "Agar koi galti (deviation) milti hai, toh use theek karta hai.\n\n" +
+      "Iska maqsad yeh ensure karna hai ki organisation apne goals ki taraf sahi ja rahi hai."
   },
 
   // ✅ QUESTION 2
   {
-    question: "_____ is the scientific technique through which F.W. Taylor devised the concept of assembly line.",
-    options: ["Time study", "Motion study", "Method study", "Standardisation and simplification"],
-    correct: 2,
-    topic: "Scientific Management – Taylor",
+    question: "Which scientific technique helped F.W. Taylor develop the concept of assembly line?",
+    options: ["Time study", "Motion study", "Method study", "Standardisation"],
+    correct: 1,
+    topic: "Scientific Management – Techniques",
     explanation:
-      "Motion study me worker ke har movement ko analyse kiya jaata hai. F.W. Taylor ne unnecessary movements hatakar assembly line concept develop kiya, jisse productivity badhi."
+      "Motion study mein workers ki movements ko closely dekha jata hai taaki faltu ki mehnat khatam ho sake.\n\n" +
+      "Isi technique se Taylor ne 'Assembly Line' ka concept nikala jahan kaam ek flow mein chalta hai."
   },
 
   // ✅ QUESTION 3
   {
-    question: "Rate of saving and investment, money supply, public debt, imports and exports are components of which dimension of business environment?",
-    options: ["Political", "Legal", "Economic", "Social"],
-    correct: 3,
-    topic: "Business Environment – Economic Dimension",
+    question: "Rate of saving, money supply, public debt, imports and exports are components of which business environment dimension?",
+    options: ["Political", "Social", "Economic", "Legal"],
+    correct: 2,
+    topic: "Business Environment",
     explanation:
-      "Economic environment me paisa, income, savings, investment aur inflation jaise factors shamil hote hain jo directly business decisions ko affect karte hain."
+      "Economic environment mein wo saare factors aate hain jo desh ki economy aur paise se jude hote hain.\n\n" +
+      "Saving rate, inflation, aur money supply directly business ki demand aur growth ko affect karte hain."
   },
 
   // ✅ QUESTION 4
   {
-    question: "Identify the statement which does not refer to features of business environment.",
-    options: ["Dynamic nature", "Innovative", "Specific and general forces", "Totality of external forces"],
-    correct: 2,
-    topic: "Features of Business Environment",
+    question: "Which of the following does NOT represent a feature of business environment?",
+    options: ["Dynamic nature", "Specific and general forces", "Totality of external forces", "Innovative"],
+    correct: 3,
+    topic: "Business Environment – Features",
     explanation:
-      "Business environment dynamic aur complex hota hai. 'Innovative' hona business ya entrepreneur ki quality hai, environment ka inherent feature nahi."
+      "Business environment hamesha badalta rehta hai (Dynamic) aur isme bahar ki forces hoti hain.\n\n" +
+      "Lekin 'Innovative' hona ek company ki quality ho sakti hai, yeh environment ka feature nahi hai."
   },
 
   // ✅ QUESTION 5
   {
-    question: "Mr. Raj systematically divided work among departments for smooth functioning. Identify the importance of planning highlighted.",
-    options: [
-      "Planning promotes innovative ideas",
-      "Planning facilitates decision making",
-      "Planning reduces the risk of uncertainty",
-      "Planning reduces overlapping and wasteful activities"
-    ],
-    correct: 4,
+    question: "Systematic division of work to ensure clarity and smooth functioning highlights which importance of planning?",
+    options: ["Planning reduces uncertainty", "Planning facilitates coordination", "Planning promotes creativity", "Planning ensures economy"],
+    correct: 1,
     topic: "Planning – Importance",
     explanation:
-      "Proper division of work se duplication aur confusion kam hota hai. Planning ensures ki resources waste na ho aur kaam systematic chale."
+      "Jab hum pehle se plan karte hain ki kaun kya karega, toh departments ke beech confusion nahi hota.\n\n" +
+      "Isse coordination baithana asaan ho jata hai aur kaam bina ruke chalta hai."
   },
 
   // ✅ QUESTION 6
   {
-    question: "Division of work into production, purchase, marketing, accounts, etc. highlights which structure?",
-    options: ["Functional structure", "Divisional structure", "Organisational structure", "Rational structure"],
+    question: "Division of work into production, purchase, marketing and accounts reflects which structure?",
+    options: ["Divisional structure", "Functional structure", "Informal structure", "Project structure"],
     correct: 1,
-    topic: "Organising – Functional Structure",
+    topic: "Organising – Organisational Structure",
     explanation:
-      "Jab kaam functions (Production, Marketing, etc.) ke basis par divide hota hai, toh use Functional structure kehte hain. Isse specialisation badhta hai."
+      "Jab kaam ko uske nature (functions) ke hisaab se baanta jata hai, toh use Functional Structure kehte hain.\n\n" +
+      "Jaise saara marketing ka kaam ek department mein, production ka ek mein. Isse specialisation aati hai."
   },
 
   // ✅ QUESTION 7
   {
     question: "Framework within which managerial and operational tasks are performed is called:",
-    options: ["Span of management", "Delegation", "Organisational structure", "Informal organisation"],
-    correct: 3,
-    topic: "Organising – Organisational Structure",
+    options: ["Delegation", "Span of management", "Organisational structure", "Informal organisation"],
+    correct: 2,
+    topic: "Organising",
     explanation:
-      "Organisational structure ek aisa framework hai jo authority-responsibility relationships aur reporting levels ko define karta hai."
+      "Organisational structure ek aisa dhancha (framework) hai jo batata hai ki kaun kiska boss hai aur kaun kya kaam karega.\n\n" +
+      "Isi ke andar saara managerial kaam hota hai."
   },
 
   // ✅ QUESTION 8
   {
-    question: "Vasu expected promotion but external recruitment was done, causing dissatisfaction. Identify limitation of external sources of recruitment.",
-    options: [
-      "Lengthy process",
-      "Dissatisfaction among existing staff",
-      "Danger of inbreeding",
-      "Competition spirit is hampered"
-    ],
+    question: "External recruitment leading to frustration among existing employees highlights which limitation?",
+    options: ["Costly process", "Lengthy process", "Dissatisfaction among staff", "Lack of innovation"],
     correct: 2,
-    topic: "Recruitment – External Sources",
+    topic: "Staffing – Recruitment",
     explanation:
-      "Bahar se log recruit karne par existing employees ko lagta hai unke growth opportunities kam ho gaye hain, jisse dissatisfaction paida hoti hai."
+      "Agar company hamesha bahar se naye log bharti karegi, toh purane employees ko lagega ki unka promotion nahi hoga.\n\n" +
+      "Isse unka morale gir jata hai aur wo kaam se dissatisfied ho jate hain."
   },
 
   // ✅ QUESTION 9
   {
     question: "Controlling function of an organisation is:",
-    options: [
-      "Forward looking",
-      "Backward looking",
-      "Both forward and backward looking",
-      "Neither forward nor backward looking"
-    ],
-    correct: 3,
-    topic: "Controlling – Nature",
+    options: ["Forward looking", "Backward looking", "Both forward and backward looking", "Neither"],
+    correct: 2,
+    topic: "Controlling",
     explanation:
-      "Controlling past performance ko check karta hai (Backward) aur future improvements suggest karta hai (Forward)."
+      "Controlling backward looking hai kyunki hum purani performance check karte hain.\n\n" +
+      "Yeh forward looking bhi hai kyunki hum aage ke liye sudhaar (corrective action) karte hain."
   },
 
   // ✅ QUESTION 10
   {
-    question: "Defective bulbs beyond permissible limit are reported to supervisor. Identify the concept highlighted.",
-    options: ["Controlling", "Key result areas", "Control by exception", "Planning"],
-    correct: 3,
-    topic: "Controlling – Control by Exception",
+    question: "Deviation beyond permissible limit being reported to supervisor refers to:",
+    options: ["Controlling", "Control by exception", "Key result areas", "Planning"],
+    correct: 1,
+    topic: "Controlling – Techniques",
     explanation:
-      "Control by exception (Management by Exception) kehta hai ki sirf wahi deviations report karni chahiye jo significant ya critical limits ke bahar hon."
+      "Manager ko har chhoti galti mein dimaag nahi lagana chahiye.\n\n" +
+      "Sirf wahi galtiyan report honi chahiye jo limit se bahar hon. Ise 'Control by Exception' kehte hain."
   },
 
   // ✅ QUESTION 11
   {
-    question: "Which of the following is not a limitation of controlling?",
-    options: [
-      "Difficulty in setting quantitative standards",
-      "Resistance from employees",
-      "Costly affair",
-      "Planning"
-    ],
-    correct: 4,
+    question: "Which is NOT a limitation of controlling?",
+    options: ["Resistance from employees", "Costly affair", "Difficulty in setting standards", "Planning"],
+    correct: 3,
     topic: "Controlling – Limitations",
     explanation:
-      "Planning controlling ka ek function hai, limitation nahi. Baaki teen options (Difficulty in standards, Resistance, Cost) controlling ki limitations hain."
+      "Planning management ka pehla function hai, controlling ki koi kami (limitation) nahi hai.\n\n" +
+      "Baki options batate hain ki controlling kyun mushkil ya mehngi ho sakti hai."
   },
 
   // ✅ QUESTION 12
   {
-    question: "Setting quantitative standards to match performance relates to which function?",
-    options: ["Controlling", "Staffing", "Directing", "Organising"],
-    correct: 1,
-    topic: "Controlling – Process",
+    question: "Setting quantitative standards to compare performance relates to which function?",
+    options: ["Planning", "Staffing", "Directing", "Controlling"],
+    correct: 3,
+    topic: "Controlling Process",
     explanation:
-      "Controlling process ka sabse pehla step 'Setting performance standards' hota hai, jiske basis par evaluation kiya jata hai."
+      "Controlling tabhi ho sakti hai jab hamare paas koi 'Number' ya 'Standard' ho check karne ke liye.\n\n" +
+      "Isliye standards set karna controlling process ka sabse pehla aur zaroori step hai."
   },
 
   // ✅ QUESTION 13
   {
-    question: "Cost incurred to raise funds through equity is called:",
-    options: ["Floatation cost", "Financial risk", "Cost of debt", "Cost of capital"],
-    correct: 1,
-    topic: "Financial Management – Floatation Cost",
+    question: "Cost of raising funds through equity is known as:",
+    options: ["Cost of debt", "Financial risk", "Cost of capital", "Floatation cost"],
+    correct: 3,
+    topic: "Financial Management",
     explanation:
-      "Naye shares ya debentures issue karte waqt jo kharche (Brokerage, Underwriting, Ads) hote hain, unhe floatation cost kehte hain."
+      "Naye shares ya debentures issue karte waqt jo kharcha hota hai (brokerage, printing, legal fees), use Floatation Cost kehte hain.\n\n" +
+      "Fund raise karne se pehle company is kharche ka dhyan rakhti hai."
   },
 
   // ✅ QUESTION 14
   {
-    question: "A trading organisation needs _____ investment in fixed assets compared to manufacturing concern.",
-    options: ["Larger", "Lesser", "Moderate", "Negligible"],
+    question: "Trade organisations require ______ investment in fixed assets compared to manufacturing firms.",
+    options: ["Higher", "Moderate", "Lesser", "Negligible"],
     correct: 2,
-    topic: "Fixed Capital",
+    topic: "Business Activities",
     explanation:
-      "Trading firms sirf goods buy/sell karti hain, unhe heavy machinery ya factories ki zarurat nahi hoti, isliye unhe kam fixed capital chahiye."
+      "Trading business sirf maal kharidta aur bechta hai, use badi factory ya machinery ki zaroorat nahi hoti.\n\n" +
+      "Isliye unka fixed capital investment manufacturing companies se kam hota hai."
   },
 
   // ✅ QUESTION 15
   {
-    question: "Rajat plans breakup of finance to purchase fixed and current assets. Identify the decision.",
-    options: ["Financial decision", "Dividend decision", "Capital structure", "Investment decision"],
-    correct: 4,
-    topic: "Investment Decision",
+    question: "Decision regarding purchase of fixed and current assets is called:",
+    options: ["Financing decision", "Dividend decision", "Investment decision", "Capital structure decision"],
+    correct: 2,
+    topic: "Financial Management",
     explanation:
-      "Ye decide karna ki paisa kin assets (Fixed or Current) me lagega, Investment Decision (Capital Budgeting) kehlata hai."
+      "Paisa kahan lagana hai (assets kharidne mein), ise Investment Decision kehte hain.\n\n" +
+      "Iska asar company ki long-term profitability aur growth par padta hai."
   },
 
   // ✅ QUESTION 16
   {
-    question: "Debt normally does not cause:",
-    options: [
-      "Dilution of control",
-      "Dilution of flexibility",
-      "Dilution of equity",
-      "Dilution of cost"
-    ],
-    correct: 1,
-    topic: "Capital Structure – Debt",
+    question: "Debt does NOT cause:",
+    options: ["Dilution of control", "Dilution of equity", "Dilution of flexibility", "Increase in risk"],
+    correct: 0,
+    topic: "Capital Structure",
     explanation:
-      "Debenture holders ya lenders ke paas voting rights nahi hote, isliye debt lene se management ka control dilute nahi hota."
+      "Karz (Debt) lene se company ka control nahi khota kyunki debenture holders ke paas voting rights nahi hote.\n\n" +
+      "Sirf naye shares bechne se control dilute hota hai."
   },
 
   // ✅ QUESTION 17
   {
-    question: "Offer to existing shareholders to buy new shares in proportion is called:",
-    options: ["Private placement", "Offer for sale", "Offer through prospectus", "Right issue"],
-    correct: 4,
-    topic: "Issue of Shares – Right Issue",
+    question: "Offering shares to existing shareholders proportionately is called:",
+    options: ["Private placement", "Right issue", "Offer for sale", "Prospectus issue"],
+    correct: 1,
+    topic: "Share Capital",
     explanation:
-      "Jab company existing shareholders ko unki current holding ke ratio me naye shares offer karti hai, toh use 'Right Issue' kehte hain."
+      "Jab company apne maujuda shareholders ko naye shares kharidne ka pehla mauka deti hai, toh use Right Issue kehte hain.\n\n" +
+      "Isse purane shareholders ki holding percentage kam nahi hoti."
   },
 
   // ✅ QUESTION 18
   {
     question: "Beneficial owner account with depository participant is known as:",
-    options: ["Securities account", "Demat account", "Share owner account", "Securities owner account"],
+    options: ["Securities account", "Shareholder account", "Demat account", "Trading account"],
     correct: 2,
-    topic: "Stock Market – Demat Account",
+    topic: "Stock Market",
     explanation:
-      "Shares ko electronic/paperless form me hold karne ke liye jo account khulwaya jata hai use Demat (Dematerialized) account kehte hain."
+      "Shares ko electronic form mein rakhne ke liye 'Demat Account' ki zaroorat hoti hai.\n\n" +
+      "Jaise paise ke liye bank account hota hai, waise hi shares ke liye Demat account hota hai."
   },
 
   // ✅ QUESTION 19
   {
-    question: "Who cannot file a complaint under Consumer Protection Act, 2019?",
-    options: [
-      "Registered consumer association",
-      "Central/State Government",
-      "Consumer for commercial purpose",
-      "Group of consumers"
-    ],
-    correct: 3,
-    topic: "Consumer Protection Act, 2019",
+    question: "Who cannot file complaint under Consumer Protection Act 2019?",
+    options: ["Consumer association", "Central government", "State government", "Individual consumer"],
+    correct: 1,
+    topic: "Consumer Protection",
     explanation:
-      "Agar koi vyakti 're-sale' ya 'commercial purpose' ke liye saman kharidta hai, toh use Consumer Protection Act ke tahat 'Consumer' nahi mana jata."
+      "Consumer Act ke mutabik consumer, group of consumers ya state govt complaint kar sakte hain.\n\n" +
+      "Central Government khud complainant nahi banti, balki wo rules banati hai."
   },
 
   // ✅ QUESTION 20
   {
-    question: "Shopkeeper forces Mohini to buy a particular brand. Which right is violated?",
-    options: [
-      "Right to be informed",
-      "Right to safety",
-      "Right to choose",
-      "Right to be heard"
-    ],
-    correct: 3,
-    topic: "Consumer Rights – Right to Choose",
+    question: "Forcing consumer to buy a particular brand violates which right?",
+    options: ["Right to safety", "Right to be heard", "Right to choose", "Right to information"],
+    correct: 2,
+    topic: "Consumer Rights",
     explanation:
-      "Har consumer ke paas variety of products me se apni pasand ka product select karne ka haq hai. Force karna is right ka violation hai."
+      "Har consumer ke paas yeh haq hai ki wo market mein available varieties mein se apni pasand ka product chune.\n\n" +
+      "Agar use force kiya jaye, toh uske 'Right to Choose' ka hannan hota hai."
   },
 
   // ✅ QUESTION 21
   {
     question: "ISI mark is found on:",
     options: ["Spices", "Jewellery", "Woollen clothes", "Electric goods"],
-    correct: 4,
-    topic: "Consumer Protection – Quality Marks",
+    correct: 3,
+    topic: "Consumer Protection – Standardisation",
     explanation:
-      "ISI mark electrical items aur industrial products ki quality aur safety ensure karne ke liye use hota hai."
+      "ISI mark quality aur safety ka nishaan hai, jo khaas kar electronic saaman par dekha jata hai.\n\n" +
+      "Spices ke liye Agmark aur Jewellery ke liye Hallmark hota hai."
   },
 
   // ✅ QUESTION 22
   {
-    question: "Availability of technology to convert idea into product is called:",
+    question: "Availability of technology to convert idea into product is known as:",
     options: ["Economic feasibility", "Financial feasibility", "Technical feasibility", "Social feasibility"],
-    correct: 3,
+    correct: 2,
     topic: "Entrepreneurship – Feasibility Analysis",
     explanation:
-      "Technical feasibility me check kiya jata hai ki kya product banane ke liye zaroori technology, raw material aur labour available hai."
+      "Technical feasibility check karti hai ki kya hamare paas wo technology ya machine hai jis se hum product bana sakein.\n\n" +
+      "Agar technology hi nahi hai, toh idea flop ho jayega."
   },
 
   // ✅ QUESTION 23
   {
-    question: "Too much advertising makes it difficult to hear message. It affects _____ of advertising.",
-    options: ["Preference", "Effectiveness", "Criticism", "Reach"],
-    correct: 2,
-    topic: "Advertising – Limitations",
+    question: "Difficulty in making advertising messages heard due to excessive advertisements affects which aspect?",
+    options: ["Preference", "Effectiveness", "Criticism", "Brand loyalty"],
+    correct: 1,
+    topic: "Marketing – Advertising",
     explanation:
-      "Ad clutter (bahut saari ads) ki wajah se consumer main message bhool jata hai, jisse advertising ki 'Effectiveness' kam ho jati hai."
+      "Jab TV ya phone par bahut saare ads ek saath aate hain (Clutter), toh log kisi par dhyan nahi dete.\n\n" +
+      "Is se advertisement ki effectiveness kam ho jati hai."
   },
 
   // ✅ QUESTION 24
   {
-    question: "Part of brand which can be recognised but not uttered is:",
+    question: "The part of a brand which can be recognised but cannot be spoken is called:",
     options: ["Brand name", "Brand mark", "Trademark", "Patent"],
-    correct: 2,
-    topic: "Branding",
+    correct: 1,
+    topic: "Marketing – Branding",
     explanation:
-      "Brand mark (Logo/Symbol) ko dekha ja sakta hai par bola nahi ja sakta. Jo bola ja sakta hai wo Brand Name hota hai."
+      "Brand mark ek logo ya design hota hai (jaise Nike ka tick). Hum use dekh kar pehchan toh sakte hain, par bol nahi sakte.\n\n" +
+      "Jo cheez boli ja sake, wo Brand Name hoti hai."
   },
 
   // ✅ QUESTION 25
   {
-    question: "Which is not true about objections to advertising?",
-    options: ["Confuses buyers", "Undermines social values", "Economical mode of communication", "Promotes materialism"],
-    correct: 3,
-    topic: "Advertising – Objections",
+    question: "Which statement is NOT true about objections to advertising?",
+    options: ["Advertisements confuse buyers", "Advertising is economical", "Advertising promotes materialism", "Ads undermine social values"],
+    correct: 1,
+    topic: "Marketing – Criticism of Advertising",
     explanation:
-      "Advertising ko costly aur wasteful mana jata hai. 'Economical mode' hona iska objection nahi balki iska feature/advantage ho sakta hai."
+      "Advertising bahut mehngi hoti hai, isliye ise 'Economical' kehna galat hai.\n\n" +
+      "Critics kehte hain ki iska kharcha customer ki pocket se hi jata hai."
   },
 
   // ✅ QUESTION 26
   {
-    question: "Using religious norms to improve tax compliance relates to which dimension?",
-    options: ["Economic", "Social", "Technological", "Political"],
-    correct: 2,
+    question: "Psychological and religious norms influencing tax compliance relate to which business environment dimension?",
+    options: ["Economic", "Social", "Technological", "Legal"],
+    correct: 1,
     topic: "Business Environment – Social Dimension",
     explanation:
-      "Dharmik vishwas (Religious norms) aur society ke values 'Social Environment' ka part hote hain."
+      "Logon ke vishwas, dharam aur samajik soch Social Environment ka hissa hote hain.\n\n" +
+      "Agar koi dharam ya samajik parampara tax dene ya na dene ko affect karti hai, toh wo Social factor hai."
   },
 
   // ✅ QUESTION 27
   {
-    question: "Correct sequence of planning process:",
+    question: "Correct sequence of planning process is:",
     options: [
-      "A, D, C, E, B",
-      "A, B, C, E, D",
-      "D, A, C, B, E",
-      "C, B, A, D, E"
+      "Developing premises → Identifying alternatives → Evaluating → Selecting → Follow-up",
+      "Identifying alternatives → Developing premises → Evaluating → Selecting → Follow-up",
+      "Evaluating → Selecting → Developing premises → Follow-up",
+      "Selecting → Evaluating → Identifying alternatives → Follow-up"
     ],
-    correct: 1,
-    topic: "Planning Process",
+    correct: 0,
+    topic: "Planning – Process",
     explanation:
-      "Sahi order: Setting objectives -> Developing premises -> Identifying alternatives -> Evaluating -> Selecting -> Implementation -> Follow-up."
+      "Planning hamesha premises (assumptions) banane se shuru hoti hai, phir alternatives dhundhe jate hain, unhe check kiya jata hai aur best ko select karke follow-up kiya jata hai."
   },
 
   // ✅ QUESTION 28
   {
-    question: "Correct sequence of organising process:",
+    question: "Correct sequence of organising process is:",
     options: [
-      "C, D, A, B",
-      "D, C, B, A",
-      "A, C, B, D",
-      "B, D, C, A"
+      "Departmentalisation → Division of work → Reporting relationships → Assignment of duties",
+      "Division of work → Departmentalisation → Assignment → Reporting",
+      "Reporting → Assignment → Departmentalisation → Division",
+      "Assignment → Division → Departmentalisation → Reporting"
     ],
     correct: 1,
-    topic: "Organising Process",
+    topic: "Organising – Process",
     explanation:
-      "Identification of work -> Departmentalization -> Assignment of duties -> Establishing reporting relationships."
+      "Organising mein pehle kaam ko chhote hisson mein baant te hain (Division), phir group banate hain (Departments), phir duties dete hain aur end mein boss-subordinate relation fix karte hain."
   },
 
   // ✅ QUESTION 29
   {
-    question: "Correct sequence of staffing process:",
+    question: "Correct sequence of staffing process is:",
     options: [
-      "D, B, C, E, A",
-      "D, B, E, C, A",
-      "D, E, C, A, B",
-      "E, D, B, C, A"
+      "Estimation → Recruitment → Selection → Placement → Training",
+      "Recruitment → Selection → Training → Estimation → Placement",
+      "Selection → Recruitment → Training → Placement",
+      "Training → Recruitment → Selection → Placement"
     ],
-    correct: 4,
-    topic: "Staffing Process",
+    correct: 0,
+    topic: "Staffing – Process",
     explanation:
-      "Staffing me sequence wise activities: Estimating manpower -> Recruitment -> Selection -> Placement -> Training."
+      "Staffing mein pehle dekhte hain kitne log chahiye (Estimation), phir unhe invite karte hain (Recruitment), best ko chunte hain (Selection) aur phir unhe training dete hain."
   },
 
   // ✅ QUESTION 30
   {
-    question: "Correct sequence of staffing steps:",
+    question: "Arrange steps of staffing in correct order:",
     options: [
-      "A, B, C, D, E",
-      "B, A, D, E, C",
-      "C, B, A, D, E",
-      "E, A, C, D, B"
+      "Performance appraisal → Training → Placement → Promotion → Compensation",
+      "Training → Performance appraisal → Placement → Compensation",
+      "Placement → Training → Compensation → Promotion → Appraisal",
+      "Performance appraisal → Training → Placement → Compensation → Promotion"
     ],
     correct: 3,
-    topic: "Staffing – Development",
+    topic: "Staffing – Elements",
     explanation:
-      "Placement and Orientation ke baad Training, phir Performance Appraisal aur Compensation decide hota hai."
+      "Placement ke baad kaam ko check kiya jata hai (Appraisal), phir zaroorat padne par training aur promotion/paisa decide hota hai."
   },
 
   // ✅ QUESTION 31
   {
-    question: "Statements related to limitations of planning are:",
-    options: ["A, B, C, D", "A, C, D", "B, C, D, E", "A, C, D, E"],
-    correct: 2,
+    question: "Which statements represent limitations of planning?",
+    options: ["Planning leads to rigidity", "Planning reduces creativity", "Planning does not guarantee success", "All of the above"],
+    correct: 3,
     topic: "Planning – Limitations",
     explanation:
-      "Planning rigidity lata hai, huge cost involve karta hai aur dynamic environment me fail ho sakta hai. Ye iski main limitations hain."
+      "Planning se kaam rigid ho jata hai (badla nahi ja sakta asani se), creativity kam ho sakti hai aur bahar ke badlavo ki wajah se success ki guarantee nahi rehti."
   },
 
   // ✅ QUESTION 32
   {
     question: "Capital market consists of:",
-    options: ["A, C, E", "A, B, C", "A, D, E", "C, D, E"],
-    correct: 2,
+    options: ["Development banks", "Financial institutions", "Stock exchange", "All of the above"],
+    correct: 3,
     topic: "Financial Market – Capital Market",
     explanation:
-      "Capital market me Stock Exchange, Development Banks aur Commercial Banks shamil hote hain long-term funds ke liye."
+      "Capital market long-term fundings ke liye hota hai. Isme bank, financial institutions aur stock exchange sab shamil hote hain."
   },
 
   // ✅ QUESTION 33
   {
-    question: "External sources of recruitment are:",
-    options: ["A, C, D", "A, B, C", "B, C, D", "A and C"],
-    correct: 1,
-    topic: "Recruitment – Sources",
+    question: "Which are external sources of recruitment?",
+    options: ["Direct recruitment", "Transfer", "Casual callers", "Both A and C"],
+    correct: 3,
+    topic: "Staffing – Recruitment",
     explanation:
-      "Campus recruitment, Advertising aur Employment exchanges external sources hain. Transfer aur Promotion internal sources hote hain."
+      "Transfer ek internal source hai kyunki banda company ke andar hi rehta hai.\n\n" +
+      "Direct recruitment aur Casual callers bahar se naye log laane ke tarike hain."
   },
 
   // ✅ QUESTION 34
   {
-    question: "Correct statements about SEBI:",
-    options: ["A, C, E", "A, B, D", "A and E", "B, C, D"],
+    question: "Correct statements about SEBI are:",
+    options: ["Established in 1988", "Governs securities market", "Protects investors", "All of the above"],
     correct: 3,
-    topic: "SEBI",
+    topic: "Financial Market – SEBI",
     explanation:
-      "SEBI ek statutory regulatory body hai (Act passed in 1992) jo investors ko protect karti hai."
+      "SEBI ko 1988 mein banaya gaya tha taaki wo shares market ke rules banaye aur aam investors ko dhokhadhadi se bachaye."
   },
 
   // ✅ QUESTION 35
   {
-    question: "Drawbacks of external recruitment:",
-    options: ["B, C, E", "B, C, D", "A, B, C", "B, D, E"],
-    correct: 2,
-    topic: "Recruitment – External Sources",
+    question: "Drawbacks of external recruitment include:",
+    options: ["Dissatisfaction among staff", "Lengthy process", "Costly process", "All of the above"],
+    correct: 3,
+    topic: "Staffing – Recruitment",
     explanation:
-      "External recruitment costly hai, lamba process hai aur existing staff ka morale down karta hai (Dissatisfaction)."
+      "Bahar se log lana mehnga hota hai (Ads ke paise), time consuming hota hai aur purane staff ko bura lag sakta hai."
   },
 
   // ✅ QUESTION 36
   {
-    question: "Match List I with List II (Fayol’s principles).",
-    options: [
-      "A–II, B–I, C–IV, D–III",
-      "A–II, B–III, C–IV, D–I",
-      "A–II, B–IV, C–I, D–III",
-      "A–III, B–II, C–I, D–IV"
-    ],
+    question: "People and material at suitable place and time refers to which principle?",
+    options: ["Esprit de corps", "Order", "Stability of tenure", "Discipline"],
     correct: 1,
     topic: "Principles of Management – Fayol",
     explanation:
-      "Matching Fayol's principles like Unity of Command (One boss) and Division of Work with their respective definitions."
+      "Principle of Order kehta hai ki har cheez aur har insaan ki ek sahi jagah honi chahiye taaki unhe dhundhne mein waqt barbaad na ho."
   },
 
   // ✅ QUESTION 37
   {
-    question: "Match steps of controlling with techniques.",
-    options: [
-      "A–I, B–III, C–II, D–IV",
-      "A–II, B–I, C–IV, D–III",
-      "A–IV, B–I, C–II, D–III",
-      "A–III, B–II, C–I, D–IV"
-    ],
+    question: "Dividend payout restricted by Companies Act reflects which factor?",
+    options: ["Taxation policy", "Legal constraints", "Contractual constraints", "Stock market reaction"],
     correct: 1,
-    topic: "Controlling Process",
+    topic: "Financial Management – Dividend Decision",
     explanation:
-      "Setting standards, measurement of performance, comparison and taking corrective actions are the core steps."
+      "Companies Act ek kanoon hai. Agar kanoon koi limit lagata hai, toh use 'Legal Constraint' kaha jata hai jise company ko manna hi padta hai."
   },
 
   // ✅ QUESTION 38
   {
-    question: "Match Acts with their objectives.",
-    options: [
-      "A–I, B–II, C–III, D–IV",
-      "A–II, B–I, C–III, D–IV",
-      "A–III, B–IV, C–I, D–II",
-      "A–IV, B–III, C–II, D–I"
-    ],
-    correct: 1,
-    topic: "Business Laws",
+    question: "Bullish stock market favours which instrument?",
+    options: ["Preference shares", "Debentures", "Equity shares", "Bonds"],
+    correct: 2,
+    topic: "Capital Market",
     explanation:
-      "Correctly matching acts like Consumer Protection Act, Companies Act, and SEBI Act with their respective focus areas."
+      "Bullish market matlab jab prices badh rahe hon. Aise mein investors risk lena chahte hain aur Equity Shares mein paisa lagana pasand karte hain."
   },
 
   // ✅ QUESTION 39
   {
-    question: "Match Taylor’s techniques with statements.",
-    options: [
-      "A–I, B–III, C–II, D–IV",
-      "A–IV, B–I, C–II, D–III",
-      "A–III, B–II, C–IV, D–I",
-      "A–II, B–III, C–I, D–IV"
-    ],
-    correct: 1,
-    topic: "Scientific Management – Taylor",
+    question: "Capital budgeting decision is important because:",
+    options: ["Large funds involved", "Long-term growth", "Irreversible decisions", "All of the above"],
+    correct: 3,
+    topic: "Financial Management – Capital Budgeting",
     explanation:
-      "Matching Taylor's Scientific techniques like Functional Foremanship, Standardisation, and Time Study."
+      "Capital budgeting (badi machinery ya building mein invest karna) bahut risky hai kyunki isme bahut zyada paisa lagta hai aur ise badla nahi ja sakta."
   },
 
   // ✅ QUESTION 40
   {
-    question: "Match markets with statements.",
-    options: [
-      "A–II, B–IV, C–III, D–I",
-      "A–II, B–III, C–I, D–IV",
-      "A–III, B–IV, C–I, D–II",
-      "A–IV, B–III, C–II, D–I"
-    ],
-    correct: 1,
-    topic: "Financial Markets",
+    question: "Financial leverage is favourable when:",
+    options: ["ROI > Cost of debt", "ROI < Cost of debt", "Debt > Equity", "Equity > Debt"],
+    correct: 0,
+    topic: "Financial Management – Leverage",
     explanation:
-      "Matching Money Market (Short term) and Capital Market (Long term) instruments and features."
+      "Leverage ka fayda tabhi hai jab company apne karz ke interest se zyada munaafa (ROI) kama rahi ho.\n\n" +
+      "Is se shareholders ki kamai badh jati hai."
   },
 
   // ✅ QUESTION 41
   {
-    question: "Mr. Murthy working level of management is:",
-    options: ["Top level", "Middle level", "Lower level", "Operational level"],
-    correct: 4,
-    topic: "Levels of Management",
+    question: "Buying new machine to replace old one is:",
+    options: ["Financing decision", "Dividend decision", "Investment decision", "Working capital decision"],
+    correct: 2,
+    topic: "Financial Management",
     explanation:
-      "Supervisors aur Operational managers directly workers se deal karte hain, isliye inhe Lower/Operational level kehte hain."
+      "Nayi machinery kharidna ek long-term asset mein paisa lagana hai, isliye ise Investment Decision kehte hain."
   },
 
   // ✅ QUESTION 42
   {
-    question: "Quality of leader shown by grabbing opportunities and leading by example:",
-    options: ["Integrity", "Knowledge", "Initiative", "Motivation skill"],
-    correct: 3,
-    topic: "Leadership Qualities",
+    question: "Function of marketing that protects against delay in delivery is:",
+    options: ["Promotion", "Transportation", "Warehousing", "Market information"],
+    correct: 2,
+    topic: "Marketing – Functions",
     explanation:
-      "Initiative ka matlab hai mauka milte hi action lena aur dusron ko inspire karne ke liye aage badhna."
+      "Warehousing (Godown) mein maal pehle se store hota hai, taaki agar production ya transport mein deri ho, toh wahan se turant supply ki ja sake."
   },
 
   // ✅ QUESTION 43
   {
-    question: "Ensuring hiring of competent people relates to which function?",
-    options: ["Planning", "Organising", "Staffing", "Controlling"],
+    question: "Which is NOT a function of packaging?",
+    options: ["Product identification", "Product protection", "Product storage", "Grading"],
     correct: 3,
-    topic: "Staffing",
+    topic: "Marketing – Packaging",
     explanation:
-      "Staffing is all about putting the right people on the right jobs. Isme selection aur recruitment main kaam hota hai."
+      "Packaging ka kaam product ko surakshit rakhna aur pehchan dena hai.\n\n" +
+      "Grading ka matlab hai quality ke hisaab se maal ko alag karna, jo packaging se pehle hota hai."
   },
 
   // ✅ QUESTION 44
   {
-    question: "Training, defined jobs and feedback relate to which step?",
-    options: ["Selection", "Implementing plan", "Performance appraisal", "Taking corrective action"],
+    question: "Big cardboard box containing 100 medicine bottles represents:",
+    options: ["Primary packaging", "Secondary packaging", "Transportation packaging", "Industrial packaging"],
     correct: 2,
-    topic: "Implementation of Plan",
+    topic: "Marketing – Packaging",
     explanation:
-      "Plan ko execute karne ke liye zaroori skills (Training) aur roles (Jobs) define karna execution ka part hai."
+      "Bade dabbe jo sirf transport aur storage ke kaam aate hain, unhe 'Transportation Packaging' kaha jata hai."
   },
 
   // ✅ QUESTION 45
   {
-    question: "Ways to know reactions of employees highlight which element of communication?",
-    options: ["Sender", "Media", "Encoding", "Feedback"],
-    correct: 4,
-    topic: "Communication Process",
+    question: "Arranging staffing process correctly begins with:",
+    options: ["Selection", "Recruitment", "Training", "Estimation of manpower"],
+    correct: 3,
+    topic: "Staffing",
     explanation:
-      "Feedback wo element hai jisse sender ko pata chalta hai ki receiver ne message ko kis tarah react kiya ya samjha."
+      "Staffing tab tak shuru nahi ho sakti jab tak company ko yeh na pata ho ki use kitne logon ki zaroorat hai."
   },
 
   // ✅ QUESTION 46
   {
-    question: "Employees offered shares at lower price is which incentive?",
-    options: [
-      "Profit sharing",
-      "Co-partnership / stock option",
-      "Productivity linked wage",
-      "Perquisites"
-    ],
-    correct: 2,
-    topic: "Incentives – Financial",
+    question: "Process of stimulating people to act towards goals is:",
+    options: ["Supervision", "Motivation", "Leadership", "Communication"],
+    correct: 1,
+    topic: "Directing",
     explanation:
-      "Co-partnership (ESOP) me company apne employees ko saste daam par shares deti hai taaki wo company ke owner jaisa feel karein."
+      "Motivation ek aisi takat hai jo logon ko andar se kaam karne ke liye utsaahit (stimulate) karti hai."
   },
 
   // ✅ QUESTION 47
   {
-    question: "Individual autonomy and rewards satisfy which need?",
-    options: [
-      "Safety need",
-      "Belongingness need",
-      "Esteem need",
-      "Self-actualisation need"
-    ],
-    correct: 3,
+    question: "Maslow’s physiological needs include:",
+    options: ["Stability", "Title", "Hunger", "Friendship"],
+    correct: 2,
     topic: "Motivation – Maslow",
     explanation:
-      "Self-respect, recognition aur autonomy 'Esteem Needs' ke andar aati hain."
+      "Physiological needs sabse basic hoti hain jo zinda rehne ke liye chahiye, jaise khana (hunger), pani aur ghar."
   },
 
   // ✅ QUESTION 48
   {
-    question: "All communication must be recorded and filed. Type of communication is:",
-    options: ["Lateral", "Informal", "Grapevine", "Formal"],
-    correct: 4,
-    topic: "Formal Communication",
+    question: "Formal communication does NOT:",
+    options: ["Follow official channels", "Spread rumours", "Be recorded", "Have identifiable source"],
+    correct: 1,
+    topic: "Communication",
     explanation:
-      "Formal communication usually written hota hai aur as an official record company me file kiya jata hai."
+      "Formal communication hamesha written aur official hota hai.\n\n" +
+      "Afwahin (Rumours) hamesha informal communication (Grapevine) se failti hain."
   },
 
   // ✅ QUESTION 49
   {
-    question: "Non-financial incentive highlighted by autonomy and rewards is:",
-    options: ["Status", "Organisational climate", "Employee recognition", "Career advancement"],
-    correct: 3,
-    topic: "Non-Financial Incentives",
+    question: "Analysing deviations only when they cross limit is called:",
+    options: ["Critical point control", "Management by exception", "Standard deviation", "Planning"],
+    correct: 1,
+    topic: "Controlling – Techniques",
     explanation:
-      "Employee Recognition programs me workers ko unki achievements ke liye rewards aur appreciation milta hai."
+      "Agar har choti galti manager ke paas jayegi, toh wo bada kaam nahi kar payega.\n\n" +
+      "Isliye sirf badi galtiyon par focus karna 'Management by Exception' hai."
   },
 
   // ✅ QUESTION 50
   {
-    question: "Skill possessed by Mr. Murthy by motivating employees is:",
-    options: ["Communication skill", "Motivation skill", "Self confidence", "Integrity"],
-    correct: 2,
-    topic: "Leadership Skills",
+    question: "Monitoring organisational performance as per plans is:",
+    options: ["Planning", "Staffing", "Directing", "Controlling"],
+    correct: 3,
+    topic: "Functions of Management",
     explanation:
-      "Ek achhe leader me dusron ko motivate aur inspire karne ki skill (Motivation skill) honi zaroori hai."
+      "Yeh dekhna ki kaam plan ke mutabik ho raha hai ya nahi, controlling function ka main maqsad hai."
   }
 ];
