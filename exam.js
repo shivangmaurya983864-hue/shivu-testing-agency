@@ -1,22 +1,19 @@
-/********************
- * GLOBAL STATE
- ********************/
 let currentIndex = 0;
 let answers = [];
 let status = [];
-let timeLeft = 3600; // 1 hour
+let timeLeft = 3600;
 
-/********************
- * INIT / RESUME
- ********************/
+// ================== INIT / RESUME ==================
 const savedExam = localStorage.getItem("examResult");
 
 if (savedExam) {
-  // 🔥 RESUME EXAM
+  // 🔥 RESUME MODE
   const data = JSON.parse(savedExam);
-  answers = data.answers || [];
-  status = data.status || [];
-  currentIndex = data.currentIndex ?? 0;
+
+  answers = data.answers;
+  status = data.status;
+  currentIndex = data.currentIndex || 0;
+
 } else {
   // 🆕 FRESH EXAM
   for (let i = 0; i < questions.length; i++) {
@@ -26,34 +23,26 @@ if (savedExam) {
   saveProgress();
 }
 
-/********************
- * TIMER
- ********************/
+// ================== TIMER ==================
 const timerInterval = setInterval(() => {
   if (timeLeft <= 0) {
-    clearInterval(timerInterval);
     submitExam();
+    clearInterval(timerInterval);
     return;
   }
 
   timeLeft--;
-
-  const h = String(Math.floor(timeLeft / 3600)).padStart(2, "0");
-  const m = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, "0");
-  const s = String(timeLeft % 60).padStart(2, "0");
-
-  const timerEl = document.getElementById("timer");
-  if (timerEl) timerEl.innerText = `${h}:${m}:${s}`;
+  let h = String(Math.floor(timeLeft / 3600)).padStart(2, "0");
+  let m = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, "0");
+  let s = String(timeLeft % 60).padStart(2, "0");
+  document.getElementById("timer").innerText = `${h}:${m}:${s}`;
 }, 1000);
 
-/********************
- * LOAD QUESTION
- ********************/
+// ================== LOAD QUESTION ==================
 function loadQuestion() {
   const q = questions[currentIndex];
 
-  document.getElementById("qno").innerText =
-    `Question ${currentIndex + 1}`;
+  document.getElementById("qno").innerText = `Question ${currentIndex + 1}`;
   document.getElementById("questionText").innerText = q.question;
 
   const opt = document.getElementById("options");
@@ -69,42 +58,35 @@ function loadQuestion() {
       </label>`;
   });
 
-  if (status[currentIndex] === "notVisited") {
+  if (status[currentIndex] === "notVisited")
     status[currentIndex] = "notAnswered";
-  }
 
   buildPalette();
   saveProgress();
 }
 
-/********************
- * ACTIONS
- ********************/
+// ================== ACTIONS ==================
 function selectOption(i) {
   answers[currentIndex] = i;
   status[currentIndex] =
-    status[currentIndex] === "marked"
-      ? "answeredMarked"
-      : "answered";
+    status[currentIndex] === "marked" ? "answeredMarked" : "answered";
   saveProgress();
 }
 
 function saveAndNext() {
-  nextQuestion();
+  next();
 }
 
 function markForReview() {
   status[currentIndex] =
-    answers[currentIndex] !== null
-      ? "answeredMarked"
-      : "marked";
+    answers[currentIndex] != null ? "answeredMarked" : "marked";
   buildPalette();
   saveProgress();
 }
 
 function markForReviewNext() {
   markForReview();
-  nextQuestion();
+  next();
 }
 
 function clearResponse() {
@@ -113,16 +95,14 @@ function clearResponse() {
   loadQuestion();
 }
 
-function nextQuestion() {
+function next() {
   if (currentIndex < questions.length - 1) {
     currentIndex++;
     loadQuestion();
   }
 }
 
-/********************
- * QUESTION PALETTE
- ********************/
+// ================== PALETTE ==================
 function buildPalette() {
   const p = document.getElementById("paletteGrid");
   p.innerHTML = "";
@@ -130,9 +110,7 @@ function buildPalette() {
   questions.forEach((_, i) => {
     p.innerHTML += `
       <button class="pbtn ${status[i]}"
-        onclick="jump(${i})">
-        ${String(i + 1).padStart(2, "0")}
-      </button>`;
+        onclick="jump(${i})">${String(i + 1).padStart(2, "0")}</button>`;
   });
 }
 
@@ -141,9 +119,7 @@ function jump(i) {
   loadQuestion();
 }
 
-/********************
- * SAVE PROGRESS
- ********************/
+// ================== SAVE ==================
 function saveProgress() {
   localStorage.setItem(
     "examResult",
@@ -156,15 +132,11 @@ function saveProgress() {
   );
 }
 
-/********************
- * SUBMIT
- ********************/
+// ================== SUBMIT ==================
 function submitExam() {
-  saveProgress(); // 🔒 final save only
+  saveProgress(); // 🔒 final save
   window.location.href = "summary.html";
 }
 
-/********************
- * START EXAM
- ********************/
+// ================== START ==================
 loadQuestion();
