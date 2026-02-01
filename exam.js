@@ -1,160 +1,97 @@
-let currentIndex = 0;
-let answers = [];
-let status = [];
-let timeLeft = 60 * 60; // 1 hour
+let currentIndex=0;
+let answers=[];
+let status=[];
+let timeLeft=3600;
 
 // INIT
-for (let i = 0; i < questions.length; i++) {
-  answers[i] = null;
-  status[i] = "notVisited";
+for(let i=0;i<questions.length;i++){
+  answers[i]=null;
+  status[i]="notVisited";
 }
 
 // TIMER
-const timerInterval = setInterval(() => {
-  if (timeLeft <= 0) {
-    clearInterval(timerInterval);
-    submitExam();
-    return;
-  }
-
+setInterval(()=>{
+  if(timeLeft<=0) submitExam();
   timeLeft--;
-
-  const h = String(Math.floor(timeLeft / 3600)).padStart(2, "0");
-  const m = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, "0");
-  const s = String(timeLeft % 60).padStart(2, "0");
-
-  document.getElementById("timer").innerText = `${h}:${m}:${s}`;
-}, 1000);
+  let h=String(Math.floor(timeLeft/3600)).padStart(2,"0");
+  let m=String(Math.floor(timeLeft%3600/60)).padStart(2,"0");
+  let s=String(timeLeft%60).padStart(2,"0");
+  document.getElementById("timer").innerText=`${h}:${m}:${s}`;
+},1000);
 
 // LOAD QUESTION
-function loadQuestion() {
-  const q = questions[currentIndex];
+function loadQuestion(){
+  const q=questions[currentIndex];
+  document.getElementById("qno").innerText=`Question ${currentIndex+1}`;
+  document.getElementById("questionText").innerText=q.question;
 
-  document.getElementById("qno").innerText =
-    `Question ${currentIndex + 1}:`;
-  document.getElementById("questionText").innerText = q.question;
-
-  const optDiv = document.getElementById("options");
-  optDiv.innerHTML = "";
-
-  q.options.forEach((opt, i) => {
-    const checked = answers[currentIndex] === i ? "checked" : "";
-    optDiv.innerHTML += `
-      <label>
-        <input type="radio" name="option" value="${i}" ${checked}>
-        ${opt}
-      </label><br>
-    `;
+  const opt=document.getElementById("options");
+  opt.innerHTML="";
+  q.options.forEach((o,i)=>{
+    opt.innerHTML+=`
+      <label class="option">
+        <input type="radio" name="opt" ${answers[currentIndex]===i?"checked":""}
+          onclick="selectOption(${i})">
+        <span class="radio"></span>${o}
+      </label>`;
   });
 
-  if (status[currentIndex] === "notVisited") {
-    status[currentIndex] = "notAnswered";
-  }
+  if(status[currentIndex]==="notVisited")
+    status[currentIndex]="notAnswered";
 
   buildPalette();
-  updateLegend();
 }
 
-// SAVE ANSWER
-function saveAnswer() {
-  const selected = document.querySelector('input[name="option"]:checked');
-  if (selected) {
-    answers[currentIndex] = Number(selected.value);
-
-    if (status[currentIndex] === "marked") {
-      status[currentIndex] = "answeredMarked";
-    } else {
-      status[currentIndex] = "answered";
-    }
-  }
+function selectOption(i){
+  answers[currentIndex]=i;
+  status[currentIndex]=status[currentIndex]==="marked"?
+    "answeredMarked":"answered";
 }
 
-// BUTTON ACTIONS
-function saveAndNext() {
-  saveAnswer();
-  next();
-}
+function saveAndNext(){ next(); }
 
-function markForReview() {
-  if (answers[currentIndex] !== null) {
-    status[currentIndex] = "answeredMarked";
-  } else {
-    status[currentIndex] = "marked";
-  }
+function markForReview(){
+  status[currentIndex]=answers[currentIndex]!=null?"answeredMarked":"marked";
   buildPalette();
-  updateLegend();
 }
 
-function markForReviewNext() {
-  markForReview();
-  next();
-}
+function markForReviewNext(){ markForReview(); next(); }
 
-function clearResponse() {
-  answers[currentIndex] = null;
-  status[currentIndex] = "notAnswered";
+function clearResponse(){
+  answers[currentIndex]=null;
+  status[currentIndex]="notAnswered";
   loadQuestion();
 }
 
-function next() {
-  if (currentIndex < questions.length - 1) {
+function next(){
+  if(currentIndex<questions.length-1){
     currentIndex++;
     loadQuestion();
   }
 }
 
-function prevQuestion() {
-  if (currentIndex > 0) {
-    currentIndex--;
-    loadQuestion();
-  }
-}
-
-// QUESTION PALETTE
-function buildPalette() {
-  const grid = document.getElementById("paletteGrid");
-  grid.innerHTML = "";
-
-  questions.forEach((_, i) => {
-    const cls = status[i];
-    grid.innerHTML += `
-      <button class="pal ${cls}" onclick="jump(${i})">
-        ${String(i + 1).padStart(2, "0")}
-      </button>
-    `;
+// PALETTE
+function buildPalette(){
+  const p=document.getElementById("paletteGrid");
+  p.innerHTML="";
+  questions.forEach((_,i)=>{
+    p.innerHTML+=`
+      <button class="pbtn ${status[i]}" onclick="jump(${i})">${String(i+1).padStart(2,"0")}</button>`;
   });
 }
 
-function jump(i) {
-  currentIndex = i;
-  loadQuestion();
-}
+function jump(i){ currentIndex=i; loadQuestion(); }
 
-// LEGEND COUNT (logic ready, UI CSS handle karega)
-function updateLegend() {
-  const counts = {
-    notVisited: 0,
-    notAnswered: 0,
-    answered: 0,
-    marked: 0,
-    answeredMarked: 0
-  };
-
-  status.forEach(s => counts[s]++);
-  // Numbers optional – visual CSS based
-}
-
-// SUBMIT EXAM
-function submitExam() {
+// SUBMIT
+function submitExam(){
   const examResult = {
-    questions: questions,
-    answers: answers,
-    status: status
+    questions,
+    answers,
+    status
   };
 
   localStorage.setItem("examResult", JSON.stringify(examResult));
-  window.location.href = "summary.html";
+  window.location.href = "summary.html"; // ✅ OLD jaisa
 }
 
-// START EXAM
 loadQuestion();
