@@ -13,7 +13,6 @@ window.onload = function () {
   let answered = 0;
   let notAnswered = 0;
   let marked = 0;
-  let answeredMarked = 0;
   let notVisited = 0;
 
   status.forEach((s, i) => {
@@ -22,14 +21,12 @@ window.onload = function () {
     else if (s === "answered") answered++;
     else if (s === "marked" && answers[i] === null) marked++;
     else if (s === "marked" && answers[i] !== null) answeredMarked++;
-    else if (s === "answeredMarked") answeredMarked++;
   });
 
   document.getElementById("totalQ").innerText = total;
   document.getElementById("answered").innerText = answered;
   document.getElementById("notAnswered").innerText = notAnswered;
   document.getElementById("marked").innerText = marked;
-  document.getElementById("answeredMarked").innerText = answeredMarked;
   document.getElementById("notVisited").innerText = notVisited;
 };
 
