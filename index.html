@@ -1,258 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <title>Shivang Testing Agency | Mock Test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivang General Store | Smart Kirana</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --primary: #0d47a1;
-            --secondary: #1976d2;
-            --accent: #64b5f6;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0d47a1, #1976d2);
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* HEADER */
-        header {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(12px);
-            padding: 14px 40px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        header span {
-            color: #c8e6c9;
-            font-weight: 400;
-        }
-
-        /* MAIN LAYOUT */
-        .container {
-            flex: 1;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            padding: 60px;
-            gap: 40px;
-            align-items: center;
-        }
-
-        /* LEFT SECTION (ANIMATION FIXED) */
-        .welcome {
-            color: #fff;
-            opacity: 0;
-            transform: translateX(-60px);
-            animation: fadeInLeft 1.2s ease forwards;
-        }
-
-        .welcome h1 {
-            font-size: 44px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .welcome h1 span {
-            color: #ffca28;
-        }
-
-        .welcome p {
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 520px;
-        }
-
-        .line {
-            width: 120px;
-            height: 4px;
-            background: #ffca28;
-            margin: 30px 0;
-            border-radius: 5px;
-        }
-
-        /* RIGHT CARD (ANIMATION FIXED) */
-        .card {
-            background: rgba(255,255,255,0.18);
-            backdrop-filter: blur(18px);
-            border-radius: 18px;
-            padding: 35px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-
-            opacity: 0;
-            transform: translateX(60px);
-            animation: fadeInRight 1.2s ease forwards;
-        }
-
-        .card h3 {
-            color: #fff;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        label {
-            color: #e3f2fd;
-            font-size: 14px;
-            margin-bottom: 6px;
-            display: block;
-        }
-
-        select {
-            width: 100%;
-            padding: 14px;
-            border-radius: 10px;
-            border: none;
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
-
-        /* OLD STYLE BUTTON (WORKING) */
-        .start-btn {
-            width: 100%;
-            padding: 12px;
-            background: #0b4ea2;
-            color: #fff;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-
-        .start-btn:hover {
-            background: #083b7a;
-        }
-
-        .small-text {
-            margin-top: 15px;
-            font-size: 13px;
-            color: #e1f5fe;
-            text-align: center;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 15px;
-            color: #e3f2fd;
-            font-size: 14px;
-            background: rgba(0,0,0,0.2);
-        }
-
-        /* ANIMATIONS */
-        @keyframes fadeInLeft {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .container {
-                grid-template-columns: 1fr;
-                padding: 40px 20px;
-            }
-
-            .welcome h1 {
-                font-size: 34px;
-            }
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<header>
-    🟢 <strong>Shivang Testing Agency</strong>
-    <span>Excellence in Assessment</span>
+<body class="bg-slate-50 font-[Poppins]">
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+
+<div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<div>
+<h1 class="text-2xl font-extrabold text-emerald-600">Shivang General Store</h1>
+<p class="text-xs text-slate-500 font-semibold">📍 Village Trusted Grocery</p>
+</div>
+
+<div class="relative cursor-pointer" onclick="toggleCart()">
+<i class="fa-solid fa-cart-shopping text-2xl text-slate-700"></i>
+<span id="cart-badge"
+class="absolute -top-2 -right-2 bg-emerald-500 text-white text-[10px] px-2 py-0.5 rounded-full hidden">
+0
+</span>
+</div>
+</div>
+
+<div class="max-w-6xl mx-auto px-4 pb-4">
+<input type="text" id="searchInput"
+placeholder="Search products..."
+class="w-full bg-slate-100 rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-emerald-500 outline-none">
+</div>
+
+<!-- 🔥 CATEGORY BAR -->
+<div class="bg-white border-t border-b">
+<div id="cat-nav"
+class="max-w-6xl mx-auto px-4 py-3 flex gap-3 overflow-x-auto no-scrollbar sticky top-[88px] bg-white z-40">
+</div>
+</div>
+
 </header>
 
-<main class="container">
+<main class="max-w-6xl mx-auto p-4 md:p-6" id="store-container"></main>
 
-    <!-- LEFT -->
-    <section class="welcome">
-        <h1>Welcome 🤗 <span>Divya Maurya!</span></h1>
-        <p>
-            Believe in yourself and your abilities.  
-            Every mock test you attempt is one step closer to real exam success.
-        </p>
+<div id="mini-cart"
+class="fixed right-0 top-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition duration-300 z-50 p-5 overflow-y-auto">
 
-        <div class="line"></div>
+<div class="flex justify-between items-center mb-4">
+<h2 class="font-bold text-lg">Your Cart</h2>
+<button onclick="toggleCart()">
+<i class="fa-solid fa-xmark text-xl"></i>
+</button>
+</div>
 
-        <p>
-            Welcome to <strong>Shivang Testing Agency</strong>,  
-            your trusted Test Practice Centre.
-        </p>
-    </section>
+<div id="mini-cart-items" class="space-y-3 text-sm"></div>
 
-    <!-- RIGHT -->
-    <section class="card">
-        <h3>Select exam you would like to appear</h3>
+<div class="mt-6 border-t pt-4">
+<p class="font-semibold">Total: ₹<span id="mini-total">0</span></p>
 
-        <label>Exam</label>
-        <select disabled>
-            <option>CUET (UG)</option>
-        </select>
+<button onclick="checkout()"
+class="mt-3 w-full bg-emerald-500 text-white py-2 rounded-lg font-bold">
+Order on WhatsApp
+</button>
 
-        <label>Paper</label>
-        <select id="subject">
-            <option value="">-- Select --</option>
-            <option value="accountancy">Accountancy</option>
-            <option value="business">Business Studies</option>
-            <option value="economics">Economics</option>
-        </select>
+<button onclick="clearCart()"
+class="mt-2 w-full bg-red-500 text-white py-2 rounded-lg font-bold">
+Clear Cart
+</button>
+</div>
 
-        <button class="start-btn" onclick="startTest()">START MOCK TEST</button>
+</div>
 
-        <div class="small-text">
-            For STA Mock Tests of December 2026 onwards, please click here
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    © All Rights Reserved – Shivang Testing Agency
-</footer>
-
-<script>
-function startTest() {
-    const subject = document.getElementById("subject").value;
-
-    if (subject === "") {
-        alert("Please select a subject");
-        return;
-    }
-
-    localStorage.setItem("selectedSubject", subject);
-    window.location.href = "instructions.html";
-}
-</script>
+<script src="inventory.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
-
